@@ -1,0 +1,9 @@
+ <HISTORYOBJECTS>
+     <HISTORYOBJECT name="Hipics21" path="d:/Jet/Hipics21/">
+         <PROPERTIES>
+             <PROPERTIE name="datamodel.pojoToGen" value="true"/>
+             <PROPERTIE name="db2xml.properties" value="../db2xml.properties"/>
+             <PROPERTIE name="datamodel.pojopackage" value="jet.hipics21.persistence.pojo"/>
+         </PROPERTIES>
+     </HISTORYOBJECT>
+ </HISTORYOBJECTS>

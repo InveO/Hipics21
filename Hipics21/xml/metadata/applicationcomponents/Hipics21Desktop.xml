@@ -1,0 +1,18 @@
+<APPLICATION_COMPONENT class="jet.components.ApplicationComponentImpl" depends="JetFrameworkAC" initialNutName="BaseFrame" >
+    <NUTS>
+        
+        <NUT name="BaseFrame" className="jet.framework.ui.desktop.DesktopBaseFrameNut">
+            <PARAMETER name="formName" value="BaseFrame" />
+            <PARAMETER name="formXmlFile" value="Hipics21/xml/ui/desktop/BaseFrame.xml" />
+            <PARAMETER name="childNutName" value="Hipics21DesktopNut" />
+            <PARAMETER name="childNutApp" value="Hipics21" />
+        </NUT>
+
+        <NUT name="Hipics21DesktopNut" className="jet.hipics21.ui.desktop.Hipics21DesktopNut">
+            <PARAMETER name="formName" value="Hipics21DesktopForm" />
+            <PARAMETER name="formXmlFile" value="Hipics21/xml/ui/desktop/Hipics21DesktopForm.xml" />
+        </NUT>
+        
+    </NUTS>
+</APPLICATION_COMPONENT>
+        
