@@ -1,0 +1,6 @@
+package jet.hipics21.util;
+
+public enum PHASE_STATUS {
+
+	NOT_STARTED, ELIMINATED, WITHDRAWN, DISQUALIFIED, FINISHED, RUNNING; 
+}

@@ -5,4 +5,21 @@
     <IMPORT name="Hipics21/xml/ui/GenericStyles.xml" /> 
     <IMPORT name="Hipics21/xml/ui/GenericAlgos.xml" /> 
     
+    <LABEL name="EditorHeaderLabel" font="editorHeaderFont" /> 
+    <LABEL name="EditorLabel" font="editorFont" /> 
+    
+	<GROUP name="GenericTitleGroup" layoutmanager="gridbaglayout" gradientBackgroundColor="gradientGreen">
+		<LABEL name="titleLabel" extends="EditorHeaderLabel"  foregroundColor="editorHeaderForeColor" >
+			<GRIDBAGCONSTRAINTS gridx="0" gridy="0" gridwidth="1" gridheight="1" weightx="1" weighty="0" insettop="20" insetleft="3" insetright="3" insetbottom="3" anchor="CENTER" />
+		</LABEL>
+		<GRIDBAGCONSTRAINTS gridx="0" gridy="0" gridwidth="1" gridheight="1" weightx="1" weighty="0" insettop="3" insetleft="3" insetright="3" insetbottom="3" />
+	</GROUP>
+    
+    <DISPLAY2 name="EmptyTable" style="tableStyle" opaque="false" />
+    
+    <BUTTON name="CreateButton" font="editorFont" localizedDisplayableText="Hipics21/properties/desktop/Button/button.create" />
+    <BUTTON name="EditorButton" font="editorFont" />
+	<COMBOBOX name="ComboBoxEditor" foregroundColor="editorForeColor" font="editorFont" />
+    <DATE name="DateFieldEditor" foregroundColor="editorForeColor" opaque="true" font="editorFont" />		
+    <TEXT name="TextFieldEditor" foregroundColor="editorForeColor" opaque="true" font="editorFont" />	
 </DOCUMENT>

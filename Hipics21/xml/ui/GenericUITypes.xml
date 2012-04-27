@@ -3,13 +3,102 @@
 
     <UITYPES>
     
-        <GRADIENTCOLOR name="gradient" red1="255" green1="0" blue1="0" red2="0" green2="255" blue2="0" orientation="vertical" />
+        <GRADIENTCOLOR name="gradientGreen" red1="4" green1="117" blue1="55" red2="6" green2="169" blue2="66" orientation="vertical" />
         
         <COLOR name="red" red="255" green="0" blue="0" />
         
         <FONT name="font" font_name="Arial" size="12" style="PLAIN"  />
 
+        <COLOR name="dialogColor" red="40" green="64" blue="102" />
+        <COLOR name="dialogFontColor" red="255" green="255" blue="255" />
+	    <COLOR name="editorBackColor" red="4" green="117" blue="55" />           <!-- Dark Green -->
+	    <COLOR name="editorForeColor" red="6" green="169" blue="66" />        <!-- Light Green -->
+        <COLOR name="editorHeaderBackColor" red="4" green="117" blue="55" />     <!-- Dark Green -->	  
+        <COLOR name="editorHeaderForeColor" red="255" green="255" blue="255" />  <!-- White -->	  
+	    <COLOR name="loginBackColor" red="222" green="232" blue="235" />
+	    <COLOR name="loginForeColor" red="32" green="100" blue="126" />
+	    <COLOR name="loginButtonBackColor" red="32" green="100" blue="126" />
+	    <COLOR name="loginButtonForeColor" red="233" green="249" blue="255" />
+        <COLOR name="menuBarFore" red="0" green="0" blue="0" />
+	    <COLOR name="menuBarBack" red="242" green="242" blue="242" />
+		<COLOR name="menuBarFontColor" red="0" green="0" blue="0" />
+	    <COLOR name="menuBarRollOverFore" red="0" green="0" blue="0" />
+		<COLOR name="menuBarRollOverBack" red="255" green="241" blue="193" />
+	    <COLOR name="menuBarPressedFore" red="0" green="0" blue="0" />
+		<COLOR name="menuBarPressedBack" red="255" green="241" blue="193" />
+		<COLOR name="panelBackgroundColor" 	red="255" green="255" blue="255" />
+		<!--	<COLOR name="panelBackgroundColor" 	red="235" green="204" blue="180" />  -->    <!-- beige clair -->
+		<COLOR name="panelForegroundColor" 	red="32" green="100" blue="126" />
+	    <COLOR name="tableEvenBackColor" red="250" green="250" blue="250" />
+	    <COLOR name="tableEvenBackColorBlue" red="197" green="235" blue="250" />
+	    <COLOR name="tableEvenBackColorOrange" red="250" green="223" blue="98" />
+	    <COLOR name="tableForeColor" red="32" green="100" blue="126" />
+	    <COLOR name="tableHeaderBackColor" red="4" green="117" blue="55" />           <!-- Dark Green -->
+	    <COLOR name="tableHeaderForeColor" red="255" green="255" blue="255" />        <!-- White -->
+	    <COLOR name="tableHighlightColor" red="131" green="189" blue="212" />
+	    <COLOR name="tableOddBackColor" red="236" green="236" blue="236" />
+	    <COLOR name="tableOddBackColorBlue" red="183" green="221" blue="236" />
+	    <COLOR name="tableOddBackColorOrange" red="236" green="209" blue="84" />
+	    <COLOR name="tableSelectionColor" red="207" green="125" blue="8" />
+	    <COLOR name="tableSelectionForeColor" red="233" green="249" blue="255" />
+	    <COLOR name="treeTableBranchBackColor" red="222" green="222" blue="222" />
+	    <COLOR name="treeTableEvenBackColor" red="250" green="250" blue="250" />
+	    <COLOR name="treeTableForeColor" red="32" green="100" blue="126" />
+	    <COLOR name="treeTableOddBackColor" red="236" green="236" blue="236" />
+	    
+	    <COLOR name="statusBarTestBack" red="255" green="120" blue="120" />
+	    <COLOR name="red" red="255" green="0" blue="0" />
+        <COLOR name="redLight" red="255" green="122" blue="122" />
+        <COLOR name="blueLight" red="122" green="122" blue="255" />
+        <COLOR name="white" red="0" green="0" blue="0" />
+<!--        <COLOR name="green" red="0" green="255" blue="0" />-->
+<!--        <COLOR name="greenLight" red="122" green="255" blue="122" />-->
+        
+        <COLOR name="dialogTitleBGColor" red="120" green="120" blue="120" />
+        <COLOR name="dialogTitleFGColor" red="0" green="0" blue="0" />
+
+        <FONT name="dialogTitleFont" font_name="Arial" size="12" style="PLAIN"  />
+        <FONT name="dialogFont" font_name="Tahoma" size="16" style="BOLD" />
+		<FONT name="editorFont" font_name="Tahoma" size="12" style="PLAIN"/>
+		<FONT name="specialLabelFont" font_name="Tahoma" size="14" style="BOLD"/>
+        <FONT name="editorHeaderFont" font_name="Tahoma" size="20" style="PLAIN" /> 
+		<FONT name="editorTitleFont" font_name="Tahoma" size="16" style="PLAIN"/>
+        <FONT name="jetFont" font_name="Tahoma" size="12" style="BOLD" />
+        <FONT name="loginFont" font_name="Tahoma" size="10" style="BOLD" />
+   		<FONT name="menuBarFont" font_name="Tahoma" size="12" style="PLAIN"  />
+        <FONT name="poweredByFont" font_name="Tahoma" size="12" style="PLAIN" />
+	    <FONT name="tableFont" font_name="Tahoma" size="12" style="PLAIN"/>
+	    <FONT name="treeTableFont" font_name="Tahoma" size="12" style="PLAIN"/>
+
     </UITYPES>
+    
+    <UISTYLES>
+                       
+        <STYLE type="basic" name="tableHeaderStyle">
+            <ATTRIBUTE name="BackgroundColor" value="tableHeaderBackColor" />
+            <ATTRIBUTE name="ForegroundColor" value="tableHeaderForeColor" />
+            <ATTRIBUTE name="Font" value="tableFont" />
+            <ATTRIBUTE name="Alignment" value="center" />
+        </STYLE>
+        
+        <STYLE type="basic" name="tableRowStyle">
+            <ATTRIBUTE name="BackgroundColor" value="tableEvenBackColor" />
+            <ATTRIBUTE name="ForegroundColor" value="tableForeColor" />
+            <ATTRIBUTE name="Font" value="tableFont" />
+            <ATTRIBUTE name="Alignment" value="left" />
+        </STYLE>
+                
+        <STYLE type="table" name="tableStyle">
+            <COMPONENT type="header" style="tableHeaderStyle" />
+            <COMPONENT type="cell" style="tableRowStyle" algorithm="alternatingRows" />
+
+            <ATTRIBUTE name="SelectionBackground" value="tableSelectionColor" />
+            <ATTRIBUTE name="SelectionForeground" value="tableSelectionForeColor" />
+        </STYLE>
+          
+    </UISTYLES>
+	
+                
 
 </DOCUMENT>
     

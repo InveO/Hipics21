@@ -10,6 +10,6 @@
 	Version : 1.0
 -->
 
-	<BASE_SCREEN name="BaseFrame" title="Hipics21 Desktop" icon="Hipics21/icons/cloud-ico.png" height="768" width="1024" resizable="true" scrollable="false" />
+	<BASE_SCREEN name="BaseFrame" title="Hipics Desktop" icon="Hipics21/icons/logo-h.png" height="568" width="1024" resizable="true" scrollable="false" />
 
 </DOCUMENT>

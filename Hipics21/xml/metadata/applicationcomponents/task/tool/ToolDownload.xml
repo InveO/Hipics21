@@ -1,0 +1,13 @@
+<APPLICATION_COMPONENT class="jet.components.ApplicationComponentImpl" depends="JetFrameworkAC" initialNutName="HelpNut" >
+        
+    <NUTS>
+        
+        <NUT name="HelpNut" className="jet.hipics21.ui.HelpNut">
+            <PARAMETER name="formName" value="DownloadForm" />
+            <PARAMETER name="formXmlFile" value="Hipics21/xml/ui/task/tool/DownloadForm.xml" />
+        </NUT>
+            
+    </NUTS>
+    
+</APPLICATION_COMPONENT>
+        

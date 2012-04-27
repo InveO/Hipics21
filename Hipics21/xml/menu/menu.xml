@@ -8,6 +8,38 @@
             <parameter name="component" value="TestAction" />
         </action>
         
+        <!-- EVENTS MENU -->
+        <action id="Event.EventManagement" label="Hipics21/properties/desktop/Menu/item.EventManagement" type="LaunchAC"  >
+            <parameter name="component" value="EventManagement" />
+        </action>
+        
+        <!-- CONTACT MENU -->
+        <action id="Contact.ContactManagement" label="Hipics21/properties/desktop/Menu/item.ContactManagement" type="LaunchAC"  >
+            <parameter name="component" value="ContactManagement" />
+        </action>
+        
+        <!-- HORSES MENU -->
+        <action id="Horse.HorseManagement" label="Hipics21/properties/desktop/Menu/item.HorseManagement" type="LaunchAC"  >
+            <parameter name="component" value="HorseManagement" />
+        </action>
+        
+        <!-- TOOLS MENU -->
+        <action id="Tool.ToolDownload" label="Hipics21/properties/desktop/Menu/item.ToolDownload" type="LaunchAC"  >
+            <parameter name="component" value="ToolDownload" />
+        </action>
+        <action id="Tool.ToolUpload" label="Hipics21/properties/desktop/Menu/item.ToolUpload" type="LaunchAC"  >
+            <parameter name="component" value="ToolUpload" />
+        </action>
+        <action id="Tool.ToolLanguageFr" label="Hipics21/properties/desktop/Menu/item.ToolLanguageFr" type="LaunchAC"  >
+            <parameter name="component" value="ToolLanguageFr" />
+        </action>
+        <action id="Tool.ToolLanguageEn" label="Hipics21/properties/desktop/Menu/item.ToolLanguageEn" type="LaunchAC"  >
+            <parameter name="component" value="ToolLanguageEn" />
+        </action>
+        <action id="Tool.ToolLanguageDe" label="Hipics21/properties/desktop/Menu/item.ToolLanguageDe" type="LaunchAC"  >
+            <parameter name="component" value="ToolLanguageDe" />
+        </action>
+        
     </MENUACTIONS>
 	
 	<!-- The Menu system is the root element for all the menu bars -->
@@ -15,8 +47,24 @@
 		<!-- a menu bar is a list of menus -->
 		<menubar id="Hipics21MainMenuBar" separator="true" >
 			<!-- a menu may contain other menus as well as menu items -->
-            <menu id="Test" label="Hipics21/properties/desktop/Menu/menu.Test">
-                <item id="Test_TestAction" action-ref="Test.TestAction" />
+			
+            <menu id="Events" label="Hipics21/properties/desktop/Menu/menu.Events" >
+                <item id="Event_management" action-ref="Event.EventManagement" />
+            </menu>
+            <menu id="Contacts" label="Hipics21/properties/desktop/Menu/menu.Contacts" >
+                <item id="Contact_management" action-ref="Contact.ContactManagement" />
+            </menu>
+            <menu id="Horses" label="Hipics21/properties/desktop/Menu/menu.Horses" >
+                 <item id="Horse_management" action-ref="Horse.HorseManagement" />
+            </menu>
+            <menu id="Tools" label="Hipics21/properties/desktop/Menu/menu.Tools">
+                <item id="Tool_Download" action-ref="Tool.ToolDownload" />
+                <item id="Tool_Upload" action-ref="Tool.ToolUpload" />
+           		<menu id="ToolLanguage" label="Hipics21/properties/desktop/Menu/menu.ToolLanguage">
+                	<item id="Tool_Language_fr" action-ref="Tool.ToolLanguageFr" />
+                	<item id="Tool_Language_en" action-ref="Tool.ToolLanguageEn" />
+                	<item id="Tool_Language_de" action-ref="Tool.ToolLanguageDe" />
+            	</menu>
             </menu>
 		</menubar>
 	</MENUROOT>

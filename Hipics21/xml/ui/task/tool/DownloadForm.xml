@@ -1,0 +1,18 @@
+<DOCUMENT xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:noNamespaceSchemaLocation="http://jet.inveo.be/ui/JETComponentExtension.xsd" >
+
+    <GENERIC name="Hipics21/xml/ui/GenericComponent.xml" />
+    
+    <GROUP name="DownloadForm" localizedDisplayableText="Hipics21/properties/task/Tool/HeaderTitle.download" scrollable="false" layoutmanager="gridbaglayout" backgroundColor="panelBackgroundColor" foregroundColor="panelForegroundColor">
+        <GROUP name="topGroup" extends="GenericTitleGroup">
+            <GRIDBAGCONSTRAINTS gridx="0" gridy="0" gridwidth="1" gridheight="1" weightx="1" weighty="0" />
+            <ATTRIBUTE_PARAM component="titleLabel" name="localizedDisplayableText" value="Hipics21/properties/task/Tool/HeaderTitle.download" />
+        </GROUP>
+   <!--     <DISPLAY2 name="helpTable" extends="EmptyTable" >
+            <GRIDBAGCONSTRAINTS gridx="0" gridy="2" gridheight="1" gridwidth="1" weightx="1" weighty="1" insetleft="10" insetright="10" insettop="10" insetbottom="5" anchor="NORTH" fill="BOTH"/>
+        	<COLUMN name="docNameCol" extends="TextFieldEditor" weight="2" localizedDisplayableText="Amanda/properties/task/Help/list.Name" />
+        	<COLUMN name="pdfCol" extends="EditorHtmlLink" weight="0" localizedDisplayableText="Amanda/properties/task/Help/list.Pdf" />
+        </DISPLAY2> -->
+		<GRIDBAGCONSTRAINTS gridx="0" gridy="0" gridwidth="1" gridheight="1" weightx="1" weighty="1" anchor="NORTH" fill="BOTH"/>
+	</GROUP>
+</DOCUMENT>
