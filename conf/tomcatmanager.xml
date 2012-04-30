@@ -1,0 +1,9 @@
+<TOMCATMANAGER>
+    
+    <!--  working dir must start with an upper case drive lettre on windows systems  -->
+	<EMBEDDED port="8081" workingdir="C:/Jet/JetTomcat" warpath="C:/Jet/JetLib6.0.0/JetServlet/hipics21.war" context="hipics21" >
+		<!-- & must be escaped with the &amp; sequence  -->
+		<BROWSER starturl="http://127.0.0.1:8081/hipics21/servlet/jetStart?rendering=0&amp;startApplication=Hipics21" />
+	</EMBEDDED>
+    
+</TOMCATMANAGER>
