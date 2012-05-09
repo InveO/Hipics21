@@ -11,21 +11,21 @@ import java.util.Map;
 
 import jet.hipics21.business.contact.Contact;
 import jet.hipics21.business.entry.EntryResults;
-import jet.hipics21.business.licence.LicenceCode;
+import jet.hipics21.business.licence.LICENCE_CODE;
 import jet.hipics21.business.licence.RiderLicence;
 
 
 public class RiderImpl implements Rider {
 	
-	private static Map<LicenceCode, Comparator<Rider>> comparatorByLicenceCode = new HashMap<LicenceCode, Comparator<Rider>>();
+	private static Map<LICENCE_CODE, Comparator<Rider>> comparatorByLicenceCode = new HashMap<LICENCE_CODE, Comparator<Rider>>();
 	static {
-		for (LicenceCode licenceCode: LicenceCode.values()) {
+		for (LICENCE_CODE licenceCode: LICENCE_CODE.values()) {
 			Comparator<Rider> comparator = new RiderByLicenceCode(licenceCode);
 			comparatorByLicenceCode.put(licenceCode, comparator);
 		}
 			
 	}
-	public static Comparator<Rider> getComparatorByLicenceCode(LicenceCode licenceCode) {
+	public static Comparator<Rider> getComparatorByLicenceCode(LICENCE_CODE licenceCode) {
 		
 		return comparatorByLicenceCode.get(licenceCode);
 	}
@@ -36,7 +36,7 @@ public class RiderImpl implements Rider {
 	private String licenceNumber;
 	
 	private List<EntryResults> entryResultsList = new ArrayList<EntryResults>();
-	private Map<LicenceCode, RiderLicence> riderLicenceMap = new EnumMap<LicenceCode, RiderLicence>(LicenceCode.class);
+	private Map<LICENCE_CODE, RiderLicence> riderLicenceMap = new EnumMap<LICENCE_CODE, RiderLicence>(LICENCE_CODE.class);
 	
 	RiderImpl(Contact contact) {
 		
@@ -124,7 +124,7 @@ public class RiderImpl implements Rider {
 		this.riderLicenceMap.remove(riderLicence);
 	}
 
-	public RiderLicence getRiderLicence(LicenceCode code) {
+	public RiderLicence getRiderLicence(LICENCE_CODE code) {
 		return this.riderLicenceMap.get(code);
 		
 	}
@@ -136,9 +136,9 @@ public class RiderImpl implements Rider {
 
 	private static class RiderByLicenceCode implements Comparator<Rider> {
 		
-		private final LicenceCode licenceCode;
+		private final LICENCE_CODE licenceCode;
 
-		RiderByLicenceCode(LicenceCode licenceCode) {
+		RiderByLicenceCode(LICENCE_CODE licenceCode) {
 			
 			this.licenceCode = licenceCode;
 			

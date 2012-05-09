@@ -8,11 +8,11 @@ public interface Official {
 	
 	public Contact getContact();
 	
-	public OfficialFunction getOfficialFunction();
+	public OFFICIAL_FUNCTION getOfficialFunction();
 	public GregorianCalendar getValidFrom();
 	public GregorianCalendar getValidTo();
 	
-	public void setOfficialFunction(OfficialFunction function);
+	public void setOfficialFunction(OFFICIAL_FUNCTION function);
 	public void setValidFrom(GregorianCalendar validFrom);
 	public void setValidTo(GregorianCalendar validTo);
 

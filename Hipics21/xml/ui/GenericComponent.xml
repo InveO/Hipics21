@@ -15,11 +15,30 @@
 		<GRIDBAGCONSTRAINTS gridx="0" gridy="0" gridwidth="1" gridheight="1" weightx="1" weighty="0" insettop="3" insetleft="3" insetright="3" insetbottom="3" />
 	</GROUP>
     
-    <DISPLAY2 name="EmptyTable" style="tableStyle" opaque="false" />
+    <AUTOCOMPLETE name="AutoCompleteFieldEditor" foregroundColor="editorForeColor" opaque="true" font="editorFont" />	
     
+    <BUTTON name="ContactButton"  icon="Hipics21/icons/ico_contacts.gif" />
+    <BUTTON name="ContactSmallButton"  icon="Hipics21/icons/ico_contacts_petit.gif" />
     <BUTTON name="CreateButton" font="editorFont" localizedDisplayableText="Hipics21/properties/desktop/Button/button.create" />
+    <BUTTON name="CreateDressageButton" font="editorFont" localizedDisplayableText="Hipics21/properties/desktop/Button/button.createDressage" />
+    <BUTTON name="CreateDrivingButton" font="editorFont" localizedDisplayableText="Hipics21/properties/desktop/Button/button.createDriving" />
+    <BUTTON name="CreateEventingButton" font="editorFont" localizedDisplayableText="Hipics21/properties/desktop/Button/button.createEventing" />
+    <BUTTON name="CreateJumpingButton" font="editorFont" localizedDisplayableText="Hipics21/properties/desktop/Button/button.createJumping" />
     <BUTTON name="EditorButton" font="editorFont" />
+
+    <CHECKBOX name="CheckBoxEditor" font="editorFont" /> 
+    
 	<COMBOBOX name="ComboBoxEditor" foregroundColor="editorForeColor" font="editorFont" />
+
     <DATE name="DateFieldEditor" foregroundColor="editorForeColor" opaque="true" font="editorFont" />		
+
+    <DISPLAY2 name="EmptyTable" style="tableStyle" opaque="false" />
+
+    <INTEGER name="IntegerFieldEditor" foregroundColor="editorForeColor" opaque="true" font="editorFont" />		
+
+    <TABBEDPANE name="EmptyOpaqueSubTabbedpane" tabsRolloverBackground="subPanelTabRolloverBackgreound" selectedTabsRolloverBackground="subPanelSelectedTabRolloverBackgreound" tabsRolloverForeground="subPanelTabRolloverForegreound" selectedTabsRolloverForeground="subPanelSelectedTabRolloverForegreound" opaque="true" increaseSelectedTabFontSize="false" font="subTabbedPaneFont" backgroundColor="panelBackgroundColor" foregroundColor="panelForegroundColor" tabsGradientBackground="subPanelTabsGradientBG" tabsForeground="subPanelTabsFG" selectedTabsGradientBackground="subPanelSelectedTabGradientBG" selectedTabsForeground="subPanelSelectedTabFG"  paddingTop="2" paddingBottom="2" paddingLeft="3" paddingRight="3" />
+
     <TEXT name="TextFieldEditor" foregroundColor="editorForeColor" opaque="true" font="editorFont" />	
+
+    <TEXTAREA name="TextAreaEditor" foregroundColor="editorForeColor" opaque="true" font="editorFont" />	
 </DOCUMENT>

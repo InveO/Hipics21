@@ -12,17 +12,23 @@
 	</COMBOBOX>
  
     <GROUP name="TopGroup" >
-	    <LABEL name="eventNoLabel" extends="EditorLabel" localizedDisplayableText="Hipics21/properties/task/Event/label.eventNo" >
+	    <LABEL name="competitionNoLabel" extends="EditorLabel" localizedDisplayableText="Hipics21/properties/task/Competition/label.competitionNo" >
 			<GRIDBAGCONSTRAINTS gridx="0" gridy="0" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10"  insetleft="10" insetright="10"/>
 	    </LABEL>
-        <INTEGER name="eventNo" extends="IntegerFieldEditor"  preferredwidth="70">
+        <INTEGER name="competitionNo" extends="IntegerFieldEditor"  preferredwidth="70">
 			<GRIDBAGCONSTRAINTS gridx="1" gridy="0" gridwidth="1" gridheight="1" weightx="1" weighty="0" fill="HORIZONTAL" anchor="NORTHWEST" insettop="10" insetright="10"/>
 		</INTEGER>
-	    <LABEL name="validityFromLabel" extends="EditorLabel" localizedDisplayableText="Hipics21/properties/task/Event/label.dateFrom" >
-			<GRIDBAGCONSTRAINTS gridx="0" gridy="1" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10"  insetleft="10" insetright="10"/>
+	    <LABEL name="competitionSerieLabel" extends="EditorLabel" localizedDisplayableText="Hipics21/properties/task/Competition/label.serie" >
+			<GRIDBAGCONSTRAINTS gridx="2" gridy="0" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10"  insetleft="10" insetright="10"/>
 	    </LABEL>
-        <DATE name="validityFromEditor" extends="DateFieldEditor"  preferredwidth="70" >
-			<GRIDBAGCONSTRAINTS gridx="1" gridy="1" gridwidth="1" gridheight="1" weightx="1" weighty="0" fill="HORIZONTAL" anchor="NORTHWEST" insettop="10" insetright="10"/>
+        <TEXT name="serie" extends="TextFieldEditor"  preferredwidth="10">
+			<GRIDBAGCONSTRAINTS gridx="3" gridy="0" gridwidth="1" gridheight="1" weightx="1" weighty="0" fill="HORIZONTAL" anchor="NORTHWEST" insettop="10" insetright="10"/>
+		</TEXT>
+	    <LABEL name="competitionDateLabel" extends="EditorLabel" localizedDisplayableText="Hipics21/properties/task/Competition/label.date" >
+			<GRIDBAGCONSTRAINTS gridx="4" gridy="0" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10"  insetleft="10" insetright="10"/>
+	    </LABEL>
+        <DATE name="competitionDateEditor" extends="DateFieldEditor"  preferredwidth="70" >
+			<GRIDBAGCONSTRAINTS gridx="5" gridy="0" gridwidth="1" gridheight="1" weightx="1" weighty="0" fill="HORIZONTAL" anchor="NORTHWEST" insettop="10" insetright="10"/>
 		</DATE>
 	    <LABEL name="validityToLabel" extends="EditorLabel" localizedDisplayableText="Hipics21/properties/task/Event/label.to" >
 			<GRIDBAGCONSTRAINTS gridx="2" gridy="1" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10"  insetleft="10" insetright="10"/>
@@ -270,10 +276,10 @@
 			<GRIDBAGCONSTRAINTS gridx="0" gridy="0" gridwidth="1" gridheight="1" weightx="1" weighty="1" anchor="NORTH" fill="BOTH" insetbottom="10" insetleft="10" insettop="10" />
 		</TABBEDPANE>
    	</GROUP>
-    <GROUP name="EventManagementForm" localizedDisplayableText="Hipics21/properties/task/Event/HeaderTitle.event" scrollable="false" layoutmanager="gridbaglayout" backgroundColor="panelBackgroundColor" foregroundColor="panelForegroundColor">
+    <GROUP name="JumpingCompetitionForm" localizedDisplayableText="Hipics21/properties/task/Competition/HeaderTitle.jumpingCompetition" scrollable="false" layoutmanager="gridbaglayout" backgroundColor="panelBackgroundColor" foregroundColor="panelForegroundColor">
         <GROUP name="titleGroup" extends="GenericTitleGroup">
             <GRIDBAGCONSTRAINTS gridx="0" gridy="0" gridwidth="1" gridheight="1" weightx="1" weighty="0" />
-            <ATTRIBUTE_PARAM component="titleLabel" name="localizedDisplayableText" value="Hipics21/properties/task/Event/HeaderTitle.event" />
+            <ATTRIBUTE_PARAM component="titleLabel" name="localizedDisplayableText" value="Hipics21/properties/task/Competition/HeaderTitle.jumpingCompetition" />
         </GROUP>
         <GROUP name="topGroup" extends="TopGroup">
             <GRIDBAGCONSTRAINTS gridx="0" gridy="1" gridwidth="1" gridheight="1" weightx="1" weighty="0" />

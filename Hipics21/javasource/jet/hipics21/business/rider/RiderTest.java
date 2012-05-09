@@ -8,11 +8,11 @@ import java.util.GregorianCalendar;
 
 import jet.hipics21.business.contact.Contact;
 import jet.hipics21.business.contact.ContactManager;
-import jet.hipics21.business.licence.LicenceCategory;
-import jet.hipics21.business.licence.LicenceCode;
-import jet.hipics21.business.licence.LicenceDisciplin;
+import jet.hipics21.business.licence.LICENCE_CATEGORY;
+import jet.hipics21.business.licence.LICENCE_CODE;
+import jet.hipics21.business.licence.LICENCE_DISCIPLIN;
 import jet.hipics21.business.licence.RiderLicence;
-import jet.hipics21.business.licence.RiderLicenceStatus;
+import jet.hipics21.business.licence.LICENCE_STATUS;
 
 import org.junit.After;
 import org.junit.Before;
@@ -60,8 +60,8 @@ public class RiderTest {
 		GregorianCalendar examDate = new GregorianCalendar(1998, 8, 6);
 		GregorianCalendar validFrom = new GregorianCalendar(2001, 6, 13);
 		GregorianCalendar validTo = new GregorianCalendar(2012,12,31);
-		RiderLicence riderLicence = new RiderLicence(LicenceDisciplin.DRESSAGE, LicenceCategory.AMATOR, LicenceCode.CH_DN, 
-				RiderLicenceStatus.ACTIVE, "Lausanne", 
+		RiderLicence riderLicence = new RiderLicence(LICENCE_DISCIPLIN.DRESSAGE, LICENCE_CATEGORY.AMATOR, LICENCE_CODE.CH_DN, 
+				LICENCE_STATUS.ACTIVE, "Lausanne", 
 				"333", examDate, validFrom, validTo);
 		this.rider.addLicence(riderLicence);
 
@@ -70,8 +70,8 @@ public class RiderTest {
 		examDate = new GregorianCalendar(1998, 8, 6);
 		validFrom = new GregorianCalendar(2001, 6, 13);
 		validTo = new GregorianCalendar(2012,12,31);
-		riderLicence = new RiderLicence(LicenceDisciplin.DRESSAGE, LicenceCategory.AMATOR, LicenceCode.CH_DN,  
-				RiderLicenceStatus.ACTIVE, "Lausanne", 
+		riderLicence = new RiderLicence(LICENCE_DISCIPLIN.DRESSAGE, LICENCE_CATEGORY.AMATOR, LICENCE_CODE.CH_DN,  
+				LICENCE_STATUS.ACTIVE, "Lausanne", 
 				"222", examDate, validFrom, validTo);
 		this.rider.addLicence(riderLicence);
 
@@ -80,8 +80,8 @@ public class RiderTest {
 		examDate = new GregorianCalendar(1998, 8, 6);
 		validFrom = new GregorianCalendar(2001, 6, 13);
 		validTo = new GregorianCalendar(2012,12,31);
-		riderLicence = new RiderLicence(LicenceDisciplin.DRESSAGE, LicenceCategory.AMATOR, LicenceCode.CH_DN,  
-				RiderLicenceStatus.ACTIVE, "St-Sulpice", 
+		riderLicence = new RiderLicence(LICENCE_DISCIPLIN.DRESSAGE, LICENCE_CATEGORY.AMATOR, LICENCE_CODE.CH_DN,  
+				LICENCE_STATUS.ACTIVE, "St-Sulpice", 
 				"111", examDate, validFrom, validTo);
 		this.rider.addLicence(riderLicence);
 
@@ -90,8 +90,8 @@ public class RiderTest {
 		examDate = new GregorianCalendar(1998, 8, 6);
 		validFrom = new GregorianCalendar(2001, 6, 13);
 		validTo = new GregorianCalendar(2012,12,31);
-		riderLicence = new RiderLicence(LicenceDisciplin.DRESSAGE, LicenceCategory.AMATOR, LicenceCode.CH_DN,  
-				RiderLicenceStatus.ACTIVE, "Fey", 
+		riderLicence = new RiderLicence(LICENCE_DISCIPLIN.DRESSAGE, LICENCE_CATEGORY.AMATOR, LICENCE_CODE.CH_DN,  
+				LICENCE_STATUS.ACTIVE, "Fey", 
 				"9000", examDate, validFrom, validTo);
 		this.rider.addLicence(riderLicence);
 
@@ -114,7 +114,7 @@ public class RiderTest {
 	public void test3() {		
 		
 		// teste les sort: trié par code de licence
-		System.out.println("rider trié par code licence : " + riderManager.getRiderListSortedByLicenceNumber(LicenceCode.CH_DN));
+		System.out.println("rider trié par code licence : " + riderManager.getRiderListSortedByLicenceNumber(LICENCE_CODE.CH_DN));
 		// teste les sort: trié par nom
 		System.out.println("rider trié par nom : " + riderManager.getSortedRiderList());
 		

@@ -72,8 +72,8 @@ public class OfficialTest {
 	public void test3() {
 		assertNotNull(this.official);
 		// Test les set sur l'officiel
-		official.setOfficialFunction(OfficialFunction.JUGE_INTERNA_FEI_DRESSAGE);
-		assertEquals(OfficialFunction.JUGE_INTERNA_FEI_DRESSAGE, this.official.getOfficialFunction());
+		official.setOfficialFunction(OFFICIAL_FUNCTION.JUGE_INTERNA_FEI_DRESSAGE);
+		assertEquals(OFFICIAL_FUNCTION.JUGE_INTERNA_FEI_DRESSAGE, this.official.getOfficialFunction());
 		GregorianCalendar dateValidity = new GregorianCalendar(2000, 01, 01);
 		official.setValidFrom(dateValidity);
 		assertEquals(dateValidity, official.getValidFrom());		

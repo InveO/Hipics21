@@ -8,7 +8,7 @@ import jet.hipics21.business.contact.Contact;
 public class OfficialImpl implements Official {
 	
 	private final Contact contact;
-	private OfficialFunction officialFunction;
+	private OFFICIAL_FUNCTION officialFunction;
 	private GregorianCalendar validFrom;
 	private GregorianCalendar validTo;
 	
@@ -41,7 +41,7 @@ public class OfficialImpl implements Official {
 		return this.contact;
 	}
 
-	public OfficialFunction getOfficialFunction() {
+	public OFFICIAL_FUNCTION getOfficialFunction() {
 		return this.officialFunction;
 	}
 
@@ -53,7 +53,7 @@ public class OfficialImpl implements Official {
 		return this.validTo;
 	}
 
-	public void setOfficialFunction(OfficialFunction officialFunction) {
+	public void setOfficialFunction(OFFICIAL_FUNCTION officialFunction) {
 		this.officialFunction = officialFunction;
 	}
 

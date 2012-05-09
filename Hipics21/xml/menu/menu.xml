@@ -9,8 +9,25 @@
         </action>
         
         <!-- EVENTS MENU -->
+        <action id="Event.EventList" label="Hipics21/properties/desktop/Menu/item.EventList" type="LaunchAC"  >
+            <parameter name="component" value="EventList" />
+        </action>
         <action id="Event.EventManagement" label="Hipics21/properties/desktop/Menu/item.EventManagement" type="LaunchAC"  >
             <parameter name="component" value="EventManagement" />
+        </action>
+        
+        <!-- COMPETITION MENU -->
+        <action id="Competition.DressageCompetition" label="Hipics21/properties/desktop/Menu/item.DressageCompetition" type="LaunchAC"  >
+            <parameter name="component" value="DressageCompetition" />
+        </action>
+        <action id="Competition.JumpingCompetition" label="Hipics21/properties/desktop/Menu/item.JumpingCompetition" type="LaunchAC"  >
+            <parameter name="component" value="JumpingCompetition" />
+        </action>
+        <action id="Competition.EventingCompetition" label="Hipics21/properties/desktop/Menu/item.EventingCompetition" type="LaunchAC"  >
+            <parameter name="component" value="EventingCompetition" />
+        </action>
+        <action id="Competition.DrivingCompetition" label="Hipics21/properties/desktop/Menu/item.DrivingCompetition" type="LaunchAC"  >
+            <parameter name="component" value="DrivingCompetition" />
         </action>
         
         <!-- CONTACT MENU -->
@@ -49,7 +66,14 @@
 			<!-- a menu may contain other menus as well as menu items -->
 			
             <menu id="Events" label="Hipics21/properties/desktop/Menu/menu.Events" >
+                <item id="Event_list" action-ref="Event.EventList" />
                 <item id="Event_management" action-ref="Event.EventManagement" />
+                <menu id="Competitions" label="Hipics21/properties/desktop/Menu/menu.Competitions" >
+                    <item id="Dressage_competition" action-ref="Competition.DressageCompetition" />
+                    <item id="Jumping_competition" action-ref="Competition.JumpingCompetition" />
+                    <item id="Eventing_competition" action-ref="Competition.EventingCompetition" />
+                    <item id="Driving_competition" action-ref="Competition.DrivingCompetition" />
+                </menu>
             </menu>
             <menu id="Contacts" label="Hipics21/properties/desktop/Menu/menu.Contacts" >
                 <item id="Contact_management" action-ref="Contact.ContactManagement" />

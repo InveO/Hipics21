@@ -1,0 +1,74 @@
+<DOCUMENT xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:noNamespaceSchemaLocation="http://jet.inveo.be/ui/JETComponentExtension.xsd" >
+
+    <GENERIC name="Hipics21/xml/ui/GenericComponent.xml" />
+    
+    <COMBOBOX name="EventDisciplinCB" extends="ComboBoxEditor" >
+		<LISTITEM name="ALL" localizedDisplayableText="Hipics21/properties/task/Event/item.disciplinAll"/>
+		<LISTITEM name="JUMPING" localizedDisplayableText="Hipics21/properties/task/Event/item.disciplinJumping"/>
+		<LISTITEM name="DRESSAGE" localizedDisplayableText="Hipics21/properties/task/Event/item.disciplinDressage"/>
+		<LISTITEM name="EVENTING" localizedDisplayableText="Hipics21/properties/task/Event/item.disciplinEventing"/>
+		<LISTITEM name="DRIVING" localizedDisplayableText="Hipics21/properties/task/Event/item.disciplinJumping"/>
+	</COMBOBOX>
+ 
+     <GROUP name="SelectionGroup" >
+	    <LABEL name="validityFromLabel" extends="EditorLabel" localizedDisplayableText="Hipics21/properties/task/Event/label.dateFrom" >
+			<GRIDBAGCONSTRAINTS gridx="0" gridy="0" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10"  insetleft="10" insetright="10"/>
+	    </LABEL>
+          <DATE name="validityFromEditor" extends="DateFieldEditor"  preferredwidth="70" >
+			<GRIDBAGCONSTRAINTS gridx="1" gridy="0" gridwidth="1" gridheight="1" weightx="1" weighty="0" fill="HORIZONTAL" anchor="NORTHWEST" insettop="10" insetright="10"/>
+		</DATE>
+	    <LABEL name="validityToLabel" extends="EditorLabel" localizedDisplayableText="Hipics21/properties/task/Event/label.to" >
+			<GRIDBAGCONSTRAINTS gridx="2" gridy="0" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10"  insetleft="10" insetright="10"/>
+	    </LABEL>
+          <DATE name="validityToEditor" extends="DateFieldEditor"  preferredwidth="70" >
+			<GRIDBAGCONSTRAINTS gridx="3" gridy="0" gridwidth="1" gridheight="1" weightx="1" weighty="0" fill="HORIZONTAL" anchor="NORTHWEST" insettop="10" insetright="10"/>
+		</DATE>
+	    <LABEL name="LocationLabel" extends="EditorLabel" localizedDisplayableText="Hipics21/properties/task/Event/label.location" >
+			<GRIDBAGCONSTRAINTS gridx="4" gridy="0" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10"  insetleft="10" insetright="10"/>
+	    </LABEL>
+        <TEXT name="location" extends="TextFieldEditor" >
+			<GRIDBAGCONSTRAINTS gridx="5" gridy="0" gridwidth="1" gridheight="1" weightx="1" weighty="0" fill="HORIZONTAL" anchor="NORTHWEST" insettop="10" insetright="10"/>
+		</TEXT>
+	    <LABEL name="DisciplinEventLabel" extends="EditorLabel" localizedDisplayableText="Hipics21/properties/task/Event/label.eventDisciplin" >
+			<GRIDBAGCONSTRAINTS gridx="6" gridy="0" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10"  insetleft="10" insetright="10"/>
+	    </LABEL>
+        <COMBOBOX name="disciplinEvent" extends="EventDisciplinCB" >
+			<GRIDBAGCONSTRAINTS gridx="7" gridy="0" gridwidth="1" gridheight="1" weightx="1" weighty="0" fill="HORIZONTAL" anchor="NORTHWEST" insettop="10" insetright="10"/>
+		</COMBOBOX>
+ 	</GROUP>
+    <GROUP name="CreateGroup" >
+		<BUTTON name="createButton" extends="CreateButton">
+			<GRIDBAGCONSTRAINTS gridx="0" gridy="0" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="BOTH" insettop="10" insetleft="5"  anchor="CENTER"/>
+		</BUTTON>
+ 	</GROUP>
+    <GROUP name="TopGroup" >
+        <GROUP name="selectionGroup" extends="SelectionGroup">
+            <GRIDBAGCONSTRAINTS gridx="0" gridy="0" gridwidth="1" gridheight="1" weightx="1" weighty="0" />
+        </GROUP>
+        <GROUP name="createGroup" extends="CreateGroup">
+            <GRIDBAGCONSTRAINTS gridx="1" gridy="0" gridwidth="1" gridheight="1" weightx="1" weighty="0" />
+        </GROUP> 
+ 	</GROUP>
+    <GROUP name="EventListForm" localizedDisplayableText="Hipics21/properties/task/Event/HeaderTitle.event" scrollable="false" layoutmanager="gridbaglayout" backgroundColor="panelBackgroundColor" foregroundColor="panelForegroundColor">
+        <GROUP name="titleGroup" extends="GenericTitleGroup">
+            <GRIDBAGCONSTRAINTS gridx="0" gridy="0" gridwidth="1" gridheight="1" weightx="1" weighty="0" />
+            <ATTRIBUTE_PARAM component="titleLabel" name="localizedDisplayableText" value="Hipics21/properties/task/Event/HeaderTitle.eventList" />
+        </GROUP>
+        <GROUP name="topGroup" extends="TopGroup">
+            <GRIDBAGCONSTRAINTS gridx="0" gridy="1" gridwidth="1" gridheight="1" weightx="1" weighty="0" />
+        </GROUP>
+        <DISPLAY2 name="eventsTable" extends="EmptyTable" >
+            <GRIDBAGCONSTRAINTS gridx="0" gridy="2" gridheight="1" gridwidth="1" weightx="1" weighty="1" insetleft="10" insetright="10" insettop="10" insetbottom="5" anchor="NORTH" fill="BOTH"/>
+        	<COLUMN name="eventNoCol" extends="TextFieldEditor" weight="2" localizedDisplayableText="Hipics21/properties/task/Event/label.eventNo" />
+        	<COLUMN name="eventValidityFromCol" extends="DateFieldEditor" weight="0" localizedDisplayableText="Hipics21/properties/task/Event/label.dateFrom" />
+        	<COLUMN name="eventValidityToCol" extends="DateFieldEditor" weight="0" localizedDisplayableText="Hipics21/properties/task/Event/label.dateTo" />
+        	<COLUMN name="eventLocationCol" extends="TextFieldEditor" weight="2" localizedDisplayableText="Hipics21/properties/task/Event/label.eventLocation" />
+        	<COLUMN name="eventDisciplinCol" extends="TextFieldEditor" weight="2" localizedDisplayableText="Hipics21/properties/task/Event/label.eventDisciplin" />
+        	<COLUMN name="eventStatusCol" extends="TextFieldEditor" weight="2" localizedDisplayableText="Hipics21/properties/task/Event/label.eventStatus" />
+        	<COLUMN name="eventDispModCol" extends="EditorButton" weight="2" />
+        	<COLUMN name="eventDeleteCol" extends="EditorButton" weight="2" />
+        </DISPLAY2> 
+		<GRIDBAGCONSTRAINTS gridx="0" gridy="0" gridwidth="1" gridheight="1" weightx="1" weighty="1" anchor="NORTH" fill="BOTH"/>
+	</GROUP>
+</DOCUMENT>

@@ -4,15 +4,31 @@
     <UITYPES>
     
         <GRADIENTCOLOR name="gradientGreen" red1="4" green1="117" blue1="55" red2="6" green2="169" blue2="66" orientation="vertical" />
+
+        <!-- SUB PANEL AND TABS COLORS -->
+        <COLOR name="subPanelBackgroundColor" red="240" green="240" blue="240" />
+        <COLOR name="subPanelForegroundColor" red="77" green="77" blue="77" />
+        <GRADIENTCOLOR name="subPanelTabsGradientBG" red1="180" green1="180" blue1="180" red2="115" green2="115" blue2="115" orientation="vertical" />
+        <COLOR name="subPanelTabsFG" red="255" green="255" blue="255" />
+        <GRADIENTCOLOR name="subPanelSelectedTabGradientBG" red1="4" green1="117" blue1="55" red2="6" green2="169" blue2="66" orientation="vertical" />
+        <COLOR name="subPanelSelectedTabFG" red="255" green="255" blue="255" />
+        <COLOR name="subPanelTabRolloverForegreound" red="4" green="117" blue="55" />
+        <COLOR name="subPanelSelectedTabRolloverForegreound" red="4" green="117" blue="55" />
+        <GRADIENTCOLOR name="subPanelTabRolloverBackgreound" red1="255" green1="255" blue1="255" red2="240" green2="240" blue2="240" orientation="vertical" />
+        <GRADIENTCOLOR name="subPanelSelectedTabRolloverBackgreound" red1="255" green1="255" blue1="255" red2="240" green2="240" blue2="240" orientation="vertical" />
+        <!-- END SUB PANEL AND TABS COLORS -->
         
         <COLOR name="red" red="255" green="0" blue="0" />
         
         <FONT name="font" font_name="Arial" size="12" style="PLAIN"  />
+        <!-- SUB TABBED PANE FONT -->
+        <FONT name="subTabbedPaneFont" font_name="Arial" size="12" style="PLAIN"  />
 
         <COLOR name="dialogColor" red="40" green="64" blue="102" />
         <COLOR name="dialogFontColor" red="255" green="255" blue="255" />
 	    <COLOR name="editorBackColor" red="4" green="117" blue="55" />           <!-- Dark Green -->
-	    <COLOR name="editorForeColor" red="6" green="169" blue="66" />        <!-- Light Green -->
+	    <COLOR name="lightGreenColor" red="6" green="169" blue="66" />           <!-- Light Green -->
+	    <COLOR name="editorForeColor" red="0" green="0" blue="0" />              <!-- Black -->
         <COLOR name="editorHeaderBackColor" red="4" green="117" blue="55" />     <!-- Dark Green -->	  
         <COLOR name="editorHeaderForeColor" red="255" green="255" blue="255" />  <!-- White -->	  
 	    <COLOR name="loginBackColor" red="222" green="232" blue="235" />

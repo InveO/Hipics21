@@ -11,7 +11,7 @@ import java.util.Map;
 
 import jet.hipics21.business.contact.Contact;
 import jet.hipics21.business.contact.ContactManager;
-import jet.hipics21.business.licence.LicenceCode;
+import jet.hipics21.business.licence.LICENCE_CODE;
 import jet.hipics21.business.licence.RiderLicence;
 
 public class RiderManager {
@@ -93,7 +93,7 @@ public class RiderManager {
 	}
 	
 	
-	public List<Rider> getRiderListSortedByLicenceNumber(LicenceCode licenceCode) {
+	public List<Rider> getRiderListSortedByLicenceNumber(LICENCE_CODE licenceCode) {
 		
 		List<Rider> riderList = new ArrayList<Rider>();
 		

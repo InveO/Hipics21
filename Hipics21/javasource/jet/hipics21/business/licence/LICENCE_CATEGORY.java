@@ -1,6 +1,6 @@
 package jet.hipics21.business.licence;
 
-public enum LicenceCategory {
+public enum LICENCE_CATEGORY {
 	AMATOR, PROFESSIONAL;
 
 }

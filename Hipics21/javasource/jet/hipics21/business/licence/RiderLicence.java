@@ -5,10 +5,10 @@ import java.util.GregorianCalendar;
 
 public class RiderLicence implements Comparable<RiderLicence> {
 	
-	private LicenceDisciplin disciplin; /* saut, dressage, etc. */
-	private LicenceCategory category;  /* amateur, pro, etc.*/
-	private LicenceCode licenceCode;  /* saut-régional, dressage-national, fei, etc. */
-	private RiderLicenceStatus licenceStatus; /* active, suspendu*/
+	private LICENCE_DISCIPLIN disciplin; /* saut, dressage, etc. */
+	private LICENCE_CATEGORY category;  /* amateur, pro, etc.*/
+	private LICENCE_CODE licenceCode;  /* saut-régional, dressage-national, fei, etc. */
+	private LICENCE_STATUS licenceStatus; /* active, suspendu*/
 	
 	private String examLocation;
 	private String licenceNumber;
@@ -17,7 +17,7 @@ public class RiderLicence implements Comparable<RiderLicence> {
 	GregorianCalendar validFrom;
 	GregorianCalendar validTo;
 		
-	public RiderLicence(LicenceDisciplin disciplin, LicenceCategory category, LicenceCode licenceCode, RiderLicenceStatus licenceStatus,
+	public RiderLicence(LICENCE_DISCIPLIN disciplin, LICENCE_CATEGORY category, LICENCE_CODE licenceCode, LICENCE_STATUS licenceStatus,
 						String examLocation, String licenceNumber, 
 						GregorianCalendar examDate, GregorianCalendar validFrom, GregorianCalendar validTo) {
 		assert licenceCode != null:"licenceCode null";
@@ -61,11 +61,11 @@ public class RiderLicence implements Comparable<RiderLicence> {
 		}
 	}
 
-	public LicenceCategory getCategory() {
+	public LICENCE_CATEGORY getCategory() {
 		return this.category;
 	}
 
-	public LicenceDisciplin getDisciplin() {
+	public LICENCE_DISCIPLIN getDisciplin() {
 		return this.disciplin;
 	}
 
@@ -77,7 +77,7 @@ public class RiderLicence implements Comparable<RiderLicence> {
 		return this.examLocation;
 	}
 
-	public LicenceCode getLicenceCode() {
+	public LICENCE_CODE getLicenceCode() {
 		return this.licenceCode;
 	}
 
@@ -85,7 +85,7 @@ public class RiderLicence implements Comparable<RiderLicence> {
 		return this.licenceNumber;
 	}
 
-	public RiderLicenceStatus getLicenceStatus() {
+	public LICENCE_STATUS getLicenceStatus() {
 		return this.licenceStatus;
 	}
 
@@ -101,15 +101,15 @@ public class RiderLicence implements Comparable<RiderLicence> {
 		return this.licenceCode.hashCode();
 	}
 
-	public RiderLicenceStatus licenceStatus() {
+	public LICENCE_STATUS licenceStatus() {
 		return this.licenceStatus;
 	}
 
-	public void setCategory(LicenceCategory category) {
+	public void setCategory(LICENCE_CATEGORY category) {
 		this.category = category;
 	}
 
-	public void setDisciplin(LicenceDisciplin disciplin) {
+	public void setDisciplin(LICENCE_DISCIPLIN disciplin) {
 		this.disciplin = disciplin;
 	}
 
@@ -121,7 +121,7 @@ public class RiderLicence implements Comparable<RiderLicence> {
 		this.examLocation = examLocation;
 	}
 
-	public void setLicenceCode(LicenceCode licenceCode) {
+	public void setLicenceCode(LICENCE_CODE licenceCode) {
 		this.licenceCode = licenceCode;
 	}
 
@@ -130,7 +130,7 @@ public class RiderLicence implements Comparable<RiderLicence> {
 	}
 	
 	
-	public void setLicenceStatus(RiderLicenceStatus licenceStatus) {
+	public void setLicenceStatus(LICENCE_STATUS licenceStatus) {
 		this.licenceStatus = licenceStatus;
 	}
 	
