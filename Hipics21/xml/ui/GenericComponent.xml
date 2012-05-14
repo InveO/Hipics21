@@ -22,6 +22,7 @@
     <BUTTON name="CreateButton" font="editorFont" localizedDisplayableText="Hipics21/properties/desktop/Button/button.create" />
     <BUTTON name="CreateDressageButton" font="editorFont" localizedDisplayableText="Hipics21/properties/desktop/Button/button.createDressage" />
     <BUTTON name="CreateDrivingButton" font="editorFont" localizedDisplayableText="Hipics21/properties/desktop/Button/button.createDriving" />
+    <BUTTON name="CreateEntryButton" font="editorFont" localizedDisplayableText="Hipics21/properties/desktop/Button/button.createEntry" />
     <BUTTON name="CreateEventingButton" font="editorFont" localizedDisplayableText="Hipics21/properties/desktop/Button/button.createEventing" />
     <BUTTON name="CreateJumpingButton" font="editorFont" localizedDisplayableText="Hipics21/properties/desktop/Button/button.createJumping" />
     <BUTTON name="EditorButton" font="editorFont" />
@@ -33,6 +34,7 @@
     <DATE name="DateFieldEditor" foregroundColor="editorForeColor" opaque="true" font="editorFont" />		
 
     <DISPLAY2 name="EmptyTable" style="tableStyle" opaque="false" />
+    <DOUBLE name="DoubleFieldEditor" foregroundColor="editorForeColor" opaque="true" font="editorFont" />
 
     <INTEGER name="IntegerFieldEditor" foregroundColor="editorForeColor" opaque="true" font="editorFont" />		
 
