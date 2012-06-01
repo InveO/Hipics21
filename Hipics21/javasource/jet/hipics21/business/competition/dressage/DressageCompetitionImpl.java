@@ -2,6 +2,7 @@ package jet.hipics21.business.competition.dressage;
 
 import java.awt.Dimension;
 
+import jet.hipics21.business.competition.COMPETITION_MODE;
 import jet.hipics21.business.competition.CompetitionImpl;
 import jet.hipics21.business.event.Event;
 import jet.hipics21.business.official.JudgesList;
@@ -48,6 +49,13 @@ public class DressageCompetitionImpl extends CompetitionImpl implements Dressage
 
 	@Override
 	public void setJudgesList(JudgesList judgesList) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public void setCompetitionMode(COMPETITION_MODE competitionMode) {
 		// TODO Auto-generated method stub
 		
 	}

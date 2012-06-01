@@ -38,7 +38,7 @@
 		</COMBOBOX>
  	</GROUP>
     <GROUP name="CreateGroup" >
-		<BUTTON name="createButton" extends="CreateButton">
+		<BUTTON name="createButton" extends="CreateEventButton">
 			<GRIDBAGCONSTRAINTS gridx="0" gridy="0" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="BOTH" insettop="10" insetleft="5"  anchor="CENTER"/>
 		</BUTTON>
  	</GROUP>
@@ -47,7 +47,7 @@
             <GRIDBAGCONSTRAINTS gridx="0" gridy="0" gridwidth="1" gridheight="1" weightx="1" weighty="0" />
         </GROUP>
         <GROUP name="createGroup" extends="CreateGroup">
-            <GRIDBAGCONSTRAINTS gridx="1" gridy="0" gridwidth="1" gridheight="1" weightx="1" weighty="0" />
+            <GRIDBAGCONSTRAINTS gridx="0" gridy="1" gridwidth="2" gridheight="1" weightx="1" weighty="0" />
         </GROUP> 
  	</GROUP>
     <GROUP name="EventListForm" localizedDisplayableText="Hipics21/properties/task/Event/HeaderTitle.event" scrollable="false" layoutmanager="gridbaglayout" backgroundColor="panelBackgroundColor" foregroundColor="panelForegroundColor">

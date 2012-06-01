@@ -44,7 +44,7 @@ public abstract class CompetitionImpl<T extends DISCIPLINES> implements Competit
 	private BigDecimal maxWinnings;
 	
 	private T disciplin;
-	private COMPETITION_TYPE competitionType;
+	private COMPETITION_MODE competitionMode;
 	private ACCESS_STATUS accessStatus;
 	private final Event event;
 	private RULES rules;
@@ -114,8 +114,8 @@ public abstract class CompetitionImpl<T extends DISCIPLINES> implements Competit
 		return this.competitionSeries;
 	}
 
-	public COMPETITION_TYPE getCompetitionType() {
-		return this.competitionType;
+	public COMPETITION_MODE getCompetitionMode() {
+		return this.competitionMode;
 	}
 
 	public int getCoupleMaxPoints() {
@@ -262,8 +262,8 @@ public abstract class CompetitionImpl<T extends DISCIPLINES> implements Competit
 		this.competitionSeries = competitionSerie;
 	}
 
-	public void setCompetitionType(COMPETITION_TYPE competitionType) {
-		this.competitionType = competitionType;
+	public void setCompetitionType(COMPETITION_MODE competitionMode) {
+		this.competitionMode = competitionMode;
 	}
 
 	public void setCoupleMaxPoints(int coupleMaxPoints) {

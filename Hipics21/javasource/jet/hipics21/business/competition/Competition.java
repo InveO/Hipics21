@@ -50,7 +50,7 @@ public interface Competition  <T extends DISCIPLINES> {
 	
 	public RULES getRules();
 	public T getDisciplin();
-	public COMPETITION_TYPE getCompetitionType();
+	public COMPETITION_MODE getCompetitionMode();
 	public Event getEvent();
 	public ACCESS_STATUS getAccessStatus();
 	
@@ -86,7 +86,7 @@ public interface Competition  <T extends DISCIPLINES> {
 	public void setMaxWinnings(BigDecimal maxWinnings);
 	
 	public void setRules(RULES rules);
-	public void setCompetitionType(COMPETITION_TYPE competitionType);
+	public void setCompetitionMode(COMPETITION_MODE competitionMode);
 	public void setAccessStatus(ACCESS_STATUS accessStatus);
 	
 	public void setStartDate(GregorianCalendar startDate);

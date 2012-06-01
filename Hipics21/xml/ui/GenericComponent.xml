@@ -23,6 +23,7 @@
     <BUTTON name="CreateDressageButton" font="editorFont" localizedDisplayableText="Hipics21/properties/desktop/Button/button.createDressage" />
     <BUTTON name="CreateDrivingButton" font="editorFont" localizedDisplayableText="Hipics21/properties/desktop/Button/button.createDriving" />
     <BUTTON name="CreateEntryButton" font="editorFont" localizedDisplayableText="Hipics21/properties/desktop/Button/button.createEntry" />
+    <BUTTON name="CreateEventButton" font="editorFont" localizedDisplayableText="Hipics21/properties/desktop/Button/button.createEvent" />
     <BUTTON name="CreateEventingButton" font="editorFont" localizedDisplayableText="Hipics21/properties/desktop/Button/button.createEventing" />
     <BUTTON name="CreateJumpingButton" font="editorFont" localizedDisplayableText="Hipics21/properties/desktop/Button/button.createJumping" />
     <BUTTON name="EditorButton" font="editorFont" />

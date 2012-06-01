@@ -74,8 +74,8 @@ public class CompetitionTest {
 		
 		// teste les set
 		
-		competition.setCompetitionType(COMPETITION_TYPE.OFFICIAL);
-		assertEquals(COMPETITION_TYPE.OFFICIAL, competition.getCompetitionType());
+		competition.setCompetitionMode(COMPETITION_MODE.OFFICIAL);
+		assertEquals(COMPETITION_MODE.OFFICIAL, competition.getCompetitionMode());
 		competition.setCoupleMaxPoints(800);
 		assertEquals(800, competition.getCoupleMaxPoints());
 		competition.setCoupleMinPoints(200);
