@@ -3,51 +3,51 @@
 
     <GENERIC name="Hipics21/xml/ui/GenericComponent.xml" />
     
-    <GROUP name="DownloadGroup" >
+    <GROUP name="UploadGroup" >
 	    <LABEL name="ridersLabel" extends="EditorLabel" localizedDisplayableText="Hipics21/properties/task/Contact/label.riders" >
 			<GRIDBAGCONSTRAINTS gridx="0" gridy="0" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10"  insetleft="10" insetright="10"/>
 	    </LABEL>
-		<BUTTON name="downloadRiderButton" extends="DownloadButton">
+		<BUTTON name="uploadRiderButton" extends="UploadButton">
 			<GRIDBAGCONSTRAINTS gridx="1" gridy="0" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="BOTH" insettop="10" insetleft="5"  anchor="CENTER"/>
 		</BUTTON>
-	    <LABEL name="ridersRecordsDownloadedLabel" extends="EditorLabel" localizedDisplayableText="Hipics21/properties/task/Tool/label.recordsDownloaded" >
+	    <LABEL name="ridersRecordsUploadedLabel" extends="EditorLabel" localizedDisplayableText="Hipics21/properties/task/Tool/label.recordsUploaded" >
 			<GRIDBAGCONSTRAINTS gridx="2" gridy="0" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10"  insetleft="30" insetright="10"/>
 	    </LABEL>
-        <INTEGER name="ridersRecordsDownloaded" extends="IntegerFieldEditor" editable="false"  preferredwidth="40">
+        <INTEGER name="ridersRecordsUploaded" extends="IntegerFieldEditor" editable="false"  preferredwidth="40">
 			<GRIDBAGCONSTRAINTS gridx="3" gridy="0" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10" insetright="10"/>
 		</INTEGER>
 	    <LABEL name="horsesLabel" extends="EditorLabel" localizedDisplayableText="Hipics21/properties/task/Horse/label.horses" >
 			<GRIDBAGCONSTRAINTS gridx="0" gridy="1" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10"  insetleft="10" insetright="10"/>
 	    </LABEL>
-		<BUTTON name="downloadHorseButton" extends="DownloadButton">
+		<BUTTON name="upHorseButton" extends="UploadButton">
 			<GRIDBAGCONSTRAINTS gridx="1" gridy="1" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="BOTH" insettop="10" insetleft="5"  anchor="CENTER"/>
 		</BUTTON>
-	    <LABEL name="horsesRecordsDownloadedLabel" extends="EditorLabel" localizedDisplayableText="Hipics21/properties/task/Tool/label.recordsDownloaded" >
+	    <LABEL name="horsesRecordsUploadedLabel" extends="EditorLabel" localizedDisplayableText="Hipics21/properties/task/Tool/label.recordsUploaded" >
 			<GRIDBAGCONSTRAINTS gridx="2" gridy="1" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10"  insetleft="30" insetright="10"/>
 	    </LABEL>
-        <INTEGER name="horsesRecordsDownloaded" extends="IntegerFieldEditor" editable="false"  preferredwidth="40">
+        <INTEGER name="horsesRecordsUploaded" extends="IntegerFieldEditor" editable="false"  preferredwidth="40">
 			<GRIDBAGCONSTRAINTS gridx="3" gridy="1" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10" insetright="10"/>
 		</INTEGER>
 	    <LABEL name="entriesLabel" extends="EditorLabel" localizedDisplayableText="Hipics21/properties/task/Competition/label.entries" >
 			<GRIDBAGCONSTRAINTS gridx="0" gridy="2" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10"  insetleft="10" insetright="10"/>
 	    </LABEL>
-		<BUTTON name="downloadEntriesButton" extends="DownloadButton">
+		<BUTTON name="upEntriesButton" extends="UploadButton">
 			<GRIDBAGCONSTRAINTS gridx="1" gridy="2" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="BOTH" insettop="10" insetleft="5"  anchor="CENTER"/>
 		</BUTTON>
-	    <LABEL name="entriesRecordsDownloadedLabel" extends="EditorLabel" localizedDisplayableText="Hipics21/properties/task/Tool/label.recordsDownloaded" >
+	    <LABEL name="entriesRecordsUploadedLabel" extends="EditorLabel" localizedDisplayableText="Hipics21/properties/task/Tool/label.recordsUploaded" >
 			<GRIDBAGCONSTRAINTS gridx="2" gridy="2" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10"  insetleft="30" insetright="10"/>
 	    </LABEL>
-        <INTEGER name="entriesRecordsDownloaded" extends="IntegerFieldEditor" editable="false"  preferredwidth="40">
+        <INTEGER name="entriesRecordsUploaded" extends="IntegerFieldEditor" editable="false"  preferredwidth="40">
 			<GRIDBAGCONSTRAINTS gridx="3" gridy="2" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10" insetright="10"/>
 		</INTEGER>
  	</GROUP>
     
-    <GROUP name="DownloadForm" localizedDisplayableText="Hipics21/properties/task/Tool/HeaderTitle.download" scrollable="false" layoutmanager="gridbaglayout" backgroundColor="panelBackgroundColor" foregroundColor="panelForegroundColor">
+    <GROUP name="UploadForm" localizedDisplayableText="Hipics21/properties/task/Tool/HeaderTitle.download" scrollable="false" layoutmanager="gridbaglayout" backgroundColor="panelBackgroundColor" foregroundColor="panelForegroundColor">
         <GROUP name="topGroup" extends="GenericTitleGroup">
             <GRIDBAGCONSTRAINTS gridx="0" gridy="0" gridwidth="1" gridheight="1" weightx="1" weighty="0" />
-            <ATTRIBUTE_PARAM component="titleLabel" name="localizedDisplayableText" value="Hipics21/properties/task/Tool/HeaderTitle.download" />
+            <ATTRIBUTE_PARAM component="titleLabel" name="localizedDisplayableText" value="Hipics21/properties/task/Tool/HeaderTitle.upload" />
         </GROUP>
-        <GROUP name="downloadGroup" extends="DownloadGroup">
+        <GROUP name="uploadGroup" extends="UploadGroup">
             <GRIDBAGCONSTRAINTS gridx="0" gridy="1" gridwidth="1" gridheight="1" weightx="1" weighty="0" />
          </GROUP>
 		<GRIDBAGCONSTRAINTS gridx="0" gridy="0" gridwidth="1" gridheight="1" weightx="1" weighty="1" anchor="NORTH" fill="BOTH"/>

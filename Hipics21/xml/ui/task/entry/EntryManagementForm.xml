@@ -271,10 +271,10 @@
 			<GRIDBAGCONSTRAINTS gridx="0" gridy="0" gridwidth="1" gridheight="1" weightx="1" weighty="1" anchor="NORTH" fill="BOTH" insetbottom="10" insetleft="10" insettop="10" />
 		</TABBEDPANE>
    	</GROUP>
-    <GROUP name="EventManagementForm" localizedDisplayableText="Hipics21/properties/task/Event/HeaderTitle.event" scrollable="false" layoutmanager="gridbaglayout" backgroundColor="panelBackgroundColor" foregroundColor="panelForegroundColor">
+    <GROUP name="EntryManagementForm" localizedDisplayableText="Hipics21/properties/task/Entry/HeaderTitle.entries" scrollable="false" layoutmanager="gridbaglayout" backgroundColor="panelBackgroundColor" foregroundColor="panelForegroundColor">
         <GROUP name="titleGroup" extends="GenericTitleGroup">
             <GRIDBAGCONSTRAINTS gridx="0" gridy="0" gridwidth="1" gridheight="1" weightx="1" weighty="0" />
-            <ATTRIBUTE_PARAM component="titleLabel" name="localizedDisplayableText" value="Hipics21/properties/task/Event/HeaderTitle.event" />
+            <ATTRIBUTE_PARAM component="titleLabel" name="localizedDisplayableText" value="Hipics21/properties/task/Entry/HeaderTitle.entries" />
         </GROUP>
         <GROUP name="topGroup" extends="TopGroup">
             <GRIDBAGCONSTRAINTS gridx="0" gridy="1" gridwidth="1" gridheight="1" weightx="1" weighty="0" />

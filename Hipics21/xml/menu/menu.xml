@@ -15,6 +15,9 @@
         <action id="Event.EventManagement" label="Hipics21/properties/desktop/Menu/item.EventManagement" type="LaunchAC"  >
             <parameter name="component" value="EventManagement" />
         </action>
+        <action id="Entry.EntryManagement" label="Hipics21/properties/desktop/Menu/item.EntryManagement" type="LaunchAC"  >
+            <parameter name="component" value="EntryManagement" />
+        </action>
         
         <!-- COMPETITION MENU -->
         <action id="Competition.DressageCompetition" label="Hipics21/properties/desktop/Menu/item.DressageCompetition" type="LaunchAC"  >
@@ -68,6 +71,7 @@
             <menu id="Events" label="Hipics21/properties/desktop/Menu/menu.Events" >
                 <item id="Event_list" action-ref="Event.EventList" />
                 <item id="Event_management" action-ref="Event.EventManagement" />
+                <item id="Entry_management" action-ref="Entry.EntryManagement" />
                 <menu id="Competitions" label="Hipics21/properties/desktop/Menu/menu.Competitions" >
                     <item id="Dressage_competition" action-ref="Competition.DressageCompetition" />
                     <item id="Jumping_competition" action-ref="Competition.JumpingCompetition" />

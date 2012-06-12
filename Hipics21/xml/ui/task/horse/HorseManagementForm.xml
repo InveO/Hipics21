@@ -1,0 +1,169 @@
+<DOCUMENT xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:noNamespaceSchemaLocation="http://jet.inveo.be/ui/JETComponentExtension.xsd" >
+
+    <GENERIC name="Hipics21/xml/ui/GenericComponent.xml" />
+    
+    <COMBOBOX name="HorseColorCB" extends="ComboBoxEditor" >
+		<LISTITEM name="UNKNOWN" localizedDisplayableText="Hipics21/properties/task/Horse/item.unknown"/>
+		<LISTITEM name="BAY" localizedDisplayableText="Hipics21/properties/task/Horse/item.bay"/>
+		<LISTITEM name="GREY" localizedDisplayableText="Hipics21/properties/task/Horse/item.grey"/>
+		<LISTITEM name="BLACK" localizedDisplayableText="Hipics21/properties/task/Horse/item.black"/>
+		<LISTITEM name="CHESTNUT" localizedDisplayableText="Hipics21/properties/task/Horse/item.chestnut"/>
+	</COMBOBOX>
+    <COMBOBOX name="HorseSexCB" extends="ComboBoxEditor" >
+		<LISTITEM name="UNKNOWN" localizedDisplayableText="Hipics21/properties/task/Horse/item.unknown"/>
+		<LISTITEM name="GELDING" localizedDisplayableText="Hipics21/properties/task/Horse/item.gelding"/>
+		<LISTITEM name="STALLION" localizedDisplayableText="Hipics21/properties/task/Horse/item.stallion"/>
+		<LISTITEM name="MARE" localizedDisplayableText="Hipics21/properties/task/Horse/item.mare"/>
+	</COMBOBOX>
+ 
+    <GROUP name="TopGroup" >
+	    <LABEL name="passportLabel" extends="EditorLabel" localizedDisplayableText="Hipics21/properties/task/Horse/label.passport" >
+			<GRIDBAGCONSTRAINTS gridx="0" gridy="0" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10"  insetleft="10" insetright="10"/>
+	    </LABEL>
+        <TEXT name="passport" extends="TextFieldEditor"  preferredwidth="70">
+			<GRIDBAGCONSTRAINTS gridx="1" gridy="0" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10" insetright="10"/>
+		</TEXT>
+	    <LABEL name="nameLabel" extends="EditorLabel" localizedDisplayableText="Hipics21/properties/task/Horse/label.name" >
+			<GRIDBAGCONSTRAINTS gridx="0" gridy="1" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10"  insetleft="10" insetright="10"/>
+	    </LABEL>
+        <TEXT name="nameEditor" extends="TextFieldEditor" >
+			<GRIDBAGCONSTRAINTS gridx="1" gridy="1" gridwidth="1" gridheight="1" weightx="1" weighty="0" fill="HORIZONTAL" anchor="NORTHWEST" insettop="10" insetright="10"/>
+		</TEXT>
+	    <LABEL name="sexLabel" extends="EditorLabel" localizedDisplayableText="Hipics21/properties/task/Horse/label.sex" >
+			<GRIDBAGCONSTRAINTS gridx="2" gridy="1" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10"  insetleft="10" insetright="10"/>
+	    </LABEL>
+         <COMBOBOX name="horseSex" extends="HorseSexCB"  preferredwidth="70">
+			<GRIDBAGCONSTRAINTS gridx="3" gridy="1" gridwidth="1" gridheight="1" weightx="1" weighty="0" fill="HORIZONTAL" anchor="NORTHWEST" insettop="10" insetright="10"/>
+		</COMBOBOX>
+	    <LABEL name="colorLabel" extends="EditorLabel" localizedDisplayableText="Hipics21/properties/task/Horse/label.color" >
+			<GRIDBAGCONSTRAINTS gridx="4" gridy="1" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10"  insetleft="10" insetright="10"/>
+	    </LABEL>
+         <COMBOBOX name="horseColor" extends="HorseColorCB"  preferredwidth="100">
+			<GRIDBAGCONSTRAINTS gridx="5" gridy="1" gridwidth="1" gridheight="1" weightx="1" weighty="0" fill="HORIZONTAL" anchor="NORTHWEST" insettop="10" insetright="10"/>
+		</COMBOBOX>
+	    <LABEL name="dateOfBirthLabel" extends="EditorLabel" localizedDisplayableText="Hipics21/properties/task/Horse/label.dateOfBirth" >
+			<GRIDBAGCONSTRAINTS gridx="6" gridy="1" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10"  insetleft="10" insetright="10"/>
+	    </LABEL>
+        <DATE name="horseDateOfBirthEditor" extends="DateFieldEditor"  preferredwidth="70" >
+			<GRIDBAGCONSTRAINTS gridx="7" gridy="1" gridwidth="1" gridheight="1" weightx="1" weighty="0" fill="HORIZONTAL" anchor="NORTHWEST" insettop="10" insetright="10"/>
+		</DATE>
+        <INTEGER name="horseAge" extends="IntegerFieldEditor" editable="false" preferredwidth="70" >
+			<GRIDBAGCONSTRAINTS gridx="8" gridy="1" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10" insetright="10"/>
+		</INTEGER>
+	    <LABEL name="breedLabel" extends="EditorLabel" localizedDisplayableText="Hipics21/properties/task/Horse/label.breed" >
+			<GRIDBAGCONSTRAINTS gridx="9" gridy="1" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10"  insetleft="10" insetright="10"/>
+	    </LABEL>
+        <TEXT name="breedEditor" extends="TextFieldEditor" >
+			<GRIDBAGCONSTRAINTS gridx="10" gridy="1" gridwidth="1" gridheight="1" weightx="1" weighty="0" fill="HORIZONTAL" anchor="NORTHWEST" insettop="10" insetright="10"/>
+		</TEXT>
+ 	</GROUP>
+ 	
+    <GROUP name="GlobalInfoTabbedPaneGroup" >
+	    <LABEL name="horseOwnerLabel" extends="EditorLabel" localizedDisplayableText="Hipics21/properties/task/Horse/label.owner" >
+			<GRIDBAGCONSTRAINTS gridx="0" gridy="0" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10"  insetleft="10" insetright="10"/>
+	    </LABEL>
+        <TEXT name="owner1" extends="TextFieldEditor" >
+			<GRIDBAGCONSTRAINTS gridx="1" gridy="0" gridwidth="1" gridheight="1" weightx="1" weighty="0" fill="HORIZONTAL" anchor="NORTHWEST" insettop="10" insetright="5"/>
+		</TEXT>
+		<BUTTON name="owner1Button" extends="ContactSmallButton">
+			<GRIDBAGCONSTRAINTS gridx="2" gridy="0" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="NONE" insettop="10" insetright="15"  anchor="WEST"/>
+		</BUTTON> 
+	    <LABEL name="horseCoOwnersLabel" extends="EditorLabel" localizedDisplayableText="Hipics21/properties/task/Horse/label.coOwners" >
+			<GRIDBAGCONSTRAINTS gridx="0" gridy="1" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10"  insetleft="10" insetright="10"/>
+	    </LABEL>
+        <TEXT name="owner2" extends="TextFieldEditor" >
+			<GRIDBAGCONSTRAINTS gridx="1" gridy="1" gridwidth="1" gridheight="1" weightx="1" weighty="0" fill="HORIZONTAL" anchor="NORTHWEST" insettop="10" insetright="5"/>
+		</TEXT>
+		<BUTTON name="owner2Button" extends="ContactSmallButton">
+			<GRIDBAGCONSTRAINTS gridx="2" gridy="1" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="NONE" insettop="10" insetright="15"  anchor="WEST"/>
+		</BUTTON> 
+        <TEXT name="owner3" extends="TextFieldEditor" >
+			<GRIDBAGCONSTRAINTS gridx="1" gridy="2" gridwidth="1" gridheight="1" weightx="1" weighty="0" fill="HORIZONTAL" anchor="NORTHWEST" insettop="10" insetright="5"/>
+		</TEXT>
+		<BUTTON name="owner3Button" extends="ContactSmallButton">
+			<GRIDBAGCONSTRAINTS gridx="2" gridy="2" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="NONE" insettop="10" insetright="15"  anchor="WEST"/>
+		</BUTTON> 
+	    <LABEL name="feiPassportLabel" extends="EditorLabel" localizedDisplayableText="Hipics21/properties/task/Horse/label.feiPassport" >
+			<GRIDBAGCONSTRAINTS gridx="0" gridy="3" gridwidth="2" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10"  insetleft="10" insetright="10"/>
+	    </LABEL>
+        <TEXT name="feiPassport" extends="TextFieldEditor" >
+			<GRIDBAGCONSTRAINTS gridx="1" gridy="3" gridwidth="2" gridheight="1" weightx="1" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10" insetright="5"/>
+		</TEXT>
+	    <LABEL name="UELNLabel" extends="EditorLabel" localizedDisplayableText="Hipics21/properties/task/Horse/label.UELN" >
+			<GRIDBAGCONSTRAINTS gridx="0" gridy="4" gridwidth="2" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10"  insetleft="10" insetright="10"/>
+	    </LABEL>
+        <TEXT name="UELN" extends="TextFieldEditor" >
+			<GRIDBAGCONSTRAINTS gridx="1" gridy="4" gridwidth="2" gridheight="1" weightx="1" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10" insetright="5"/>
+		</TEXT>
+	    <LABEL name="microchipLabel" extends="EditorLabel" localizedDisplayableText="Hipics21/properties/task/Horse/label.microchip" >
+			<GRIDBAGCONSTRAINTS gridx="0" gridy="5" gridwidth="2" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10"  insetleft="10" insetright="10"/>
+	    </LABEL>
+        <TEXT name="microchip" extends="TextFieldEditor" >
+			<GRIDBAGCONSTRAINTS gridx="1" gridy="5" gridwidth="2" gridheight="1" weightx="1" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10" insetright="5"/>
+		</TEXT>
+	    <LABEL name="foreignIdLabel" extends="EditorLabel" localizedDisplayableText="Hipics21/properties/task/Horse/label.foreignId" >
+			<GRIDBAGCONSTRAINTS gridx="0" gridy="6" gridwidth="2" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10"  insetleft="10" insetright="10"/>
+	    </LABEL>
+        <TEXT name="foreignId" extends="TextFieldEditor" >
+			<GRIDBAGCONSTRAINTS gridx="1" gridy="6" gridwidth="2" gridheight="1" weightx="1" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10" insetright="5"/>
+		</TEXT>
+	    <LABEL name="swissIdLabel" extends="EditorLabel" localizedDisplayableText="Hipics21/properties/task/Horse/label.swissId" >
+			<GRIDBAGCONSTRAINTS gridx="0" gridy="7" gridwidth="2" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10"  insetleft="10" insetright="10"/>
+	    </LABEL>
+        <TEXT name="swissId" extends="TextFieldEditor" >
+			<GRIDBAGCONSTRAINTS gridx="1" gridy="7" gridwidth="2" gridheight="1" weightx="1" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10" insetright="5"/>
+		</TEXT>
+	    <LABEL name="countryOfOriginLabel" extends="EditorLabel" localizedDisplayableText="Hipics21/properties/task/Horse/label.countryOfOrigin" >
+			<GRIDBAGCONSTRAINTS gridx="0" gridy="8" gridwidth="2" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10"  insetleft="10" insetright="10"/>
+	    </LABEL>
+        <TEXT name="countryOfOrigin" extends="TextFieldEditor" >
+			<GRIDBAGCONSTRAINTS gridx="1" gridy="8" gridwidth="2" gridheight="1" weightx="1" weighty="0" fill="HORIZONTAL" anchor="NORTHWEST" insettop="10" insetright="5"/>
+		</TEXT>
+	    <LABEL name="sireLabel" extends="EditorLabel" localizedDisplayableText="Hipics21/properties/task/Horse/label.sire" >
+			<GRIDBAGCONSTRAINTS gridx="0" gridy="9" gridwidth="2" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10"  insetleft="10" insetright="10"/>
+	    </LABEL>
+        <TEXT name="sire" extends="TextFieldEditor" >
+			<GRIDBAGCONSTRAINTS gridx="1" gridy="9" gridwidth="2" gridheight="1" weightx="1" weighty="0" fill="HORIZONTAL" anchor="NORTHWEST" insettop="10" insetright="5"/>
+		</TEXT>
+	    <LABEL name="damLabel" extends="EditorLabel" localizedDisplayableText="Hipics21/properties/task/Horse/label.dam" >
+			<GRIDBAGCONSTRAINTS gridx="0" gridy="10" gridwidth="2" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10"  insetleft="10" insetright="10"/>
+	    </LABEL>
+        <TEXT name="dam" extends="TextFieldEditor" >
+			<GRIDBAGCONSTRAINTS gridx="1" gridy="10" gridwidth="2" gridheight="1" weightx="1" weighty="0" fill="HORIZONTAL" anchor="NORTHWEST" insettop="10" insetright="5"/>
+		</TEXT>
+	    <LABEL name="damSireLabel" extends="EditorLabel" localizedDisplayableText="Hipics21/properties/task/Horse/label.damSire" >
+			<GRIDBAGCONSTRAINTS gridx="0" gridy="11" gridwidth="2" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10"  insetleft="10" insetright="10"/>
+	    </LABEL>
+        <TEXT name="damSire" extends="TextFieldEditor" >
+			<GRIDBAGCONSTRAINTS gridx="1" gridy="11" gridwidth="2" gridheight="1" weightx="1" weighty="0" fill="HORIZONTAL" anchor="NORTHWEST" insettop="10" insetright="5"/>
+		</TEXT>
+	</GROUP>
+	
+    <GROUP name="ResultsGroup" >
+	</GROUP>
+    <GROUP name="TabbedPaneGroup" >
+	    <TABBEDPANE name="globalInfoGroup" extends="EmptyOpaqueSubTabbedpane">
+			<GROUP name="detailsEventTabbedPaneGroup" extends="GlobalInfoTabbedPaneGroup" localizedDisplayableText="Hipics21/properties/task/Horse/item.globalInfo" backgroundColor="panelBackgroundColor" foregroundColor="panelForegroundColor" scrollable="true">
+				<GRIDBAGCONSTRAINTS gridx="0" gridy="0" gridwidth="1" gridheight="1" anchor="NORTH" fill="BOTH" />
+			</GROUP>
+			<GROUP name="resultsGroup" extends="ResultsGroup" localizedDisplayableText="Hipics21/properties/task/Horse/item.results" backgroundColor="panelBackgroundColor" foregroundColor="panelForegroundColor" scrollable="true">
+				<GRIDBAGCONSTRAINTS gridx="0" gridy="0" gridwidth="1" gridheight="1" anchor="NORTH" fill="BOTH" />
+			</GROUP>
+			<GRIDBAGCONSTRAINTS gridx="0" gridy="0" gridwidth="1" gridheight="1" weightx="1" weighty="1" anchor="NORTH" fill="BOTH" insetbottom="10" insetleft="10" insettop="10" />
+		</TABBEDPANE>
+   	</GROUP>
+    <GROUP name="HorseManagementForm" localizedDisplayableText="Hipics21/properties/task/Horse/HeaderTitle.horse" scrollable="false" layoutmanager="gridbaglayout" backgroundColor="panelBackgroundColor" foregroundColor="panelForegroundColor">
+        <GROUP name="titleGroup" extends="GenericTitleGroup">
+            <GRIDBAGCONSTRAINTS gridx="0" gridy="0" gridwidth="1" gridheight="1" weightx="1" weighty="0" />
+            <ATTRIBUTE_PARAM component="titleLabel" name="localizedDisplayableText" value="Hipics21/properties/task/Horse/HeaderTitle.horse" />
+        </GROUP>
+        <GROUP name="topGroup" extends="TopGroup">
+            <GRIDBAGCONSTRAINTS gridx="0" gridy="1" gridwidth="1" gridheight="1" weightx="1" weighty="0" />
+        </GROUP>
+        <GROUP name="tabbedPaneGroup" extends="TabbedPaneGroup">
+            <GRIDBAGCONSTRAINTS gridx="0" gridy="2" gridwidth="1" gridheight="1" weightx="1" weighty="0" />
+        </GROUP>
+		<GRIDBAGCONSTRAINTS gridx="0" gridy="0" gridwidth="1" gridheight="1" weightx="1" weighty="1" anchor="NORTH" fill="BOTH"/>
+	</GROUP>
+</DOCUMENT>

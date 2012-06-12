@@ -1,0 +1,511 @@
+<DOCUMENT xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:noNamespaceSchemaLocation="http://jet.inveo.be/ui/JETComponentExtension.xsd" >
+
+    <GENERIC name="Hipics21/xml/ui/GenericComponent.xml" />
+    
+    <COMBOBOX name="CompetitionModeCB" extends="ComboBoxEditor" >
+		<LISTITEM name="OFFICIAL" localizedDisplayableText="Hipics21/properties/task/Competition/item.modeOfficial"/>
+		<LISTITEM name="SPECIAL" localizedDisplayableText="Hipics21/properties/task/Competition/item.modeSpecial"/>
+		<LISTITEM name="UNOFFICIAL" localizedDisplayableText="Hipics21/properties/task/Competition/item.modeUnofficial"/>
+		<LISTITEM name="TRAINING" localizedDisplayableText="Hipics21/properties/task/Competition/item.modeTraining"/>
+		<LISTITEM name="OTHER" localizedDisplayableText="Hipics21/properties/task/Competition/item.modeOther"/>
+	</COMBOBOX>
+    <COMBOBOX name="CompetitionProgramCB" extends="ComboBoxEditor" >
+		<LISTITEM name="OTHER" localizedDisplayableText="Hipics21/properties/task/Competition/item.typeOther"/>
+		<LISTITEM name="CHJPMAT" displayableText="CH-JP/MAT"/>
+		<LISTITEM name="CHJP0140" displayableText="CH-JP01/40"/>
+		<LISTITEM name="GA0140" displayableText="FB01/40"/>
+		<LISTITEM name="GA0260" displayableText="FB02/60"/>
+		<LISTITEM name="L1140" displayableText="L11/40"/>
+		<LISTITEM name="L1260" displayableText="L12/60"/>
+		<LISTITEM name="LK" displayableText="L-Kür"/>
+		<LISTITEM name="M2140" displayableText="M21/40"/>
+		<LISTITEM name="M2260" displayableText="M22/60"/>
+		<LISTITEM name="MK" displayableText="M-Kür"/>
+		<LISTITEM name="GEORG" displayableText="Prix St-Georges"/>
+		<LISTITEM name="INTI" displayableText="Intermédiaire I"/>
+		<LISTITEM name="GP" displayableText="Grand-Prix"/>
+		<LISTITEM name="GPS" displayableText="Grand-Prix  Spécial"/>
+		<LISTITEM name="GPK" displayableText="Grand-Prix Kür"/>
+	</COMBOBOX>
+    <COMBOBOX name="judgeListCB" extends="ComboBoxEditor" >
+		<LISTITEM name="OTHER" localizedDisplayableText="Hipics21/properties/task/Competition/item.typeOther"/>
+	</COMBOBOX>
+    <COMBOBOX name="judgeLetterCB" extends="ComboBoxEditor" >
+		<LISTITEM name="H" displayableText="H"/>
+		<LISTITEM name="C" displayableText="C"/>
+		<LISTITEM name="M" displayableText="M"/>
+		<LISTITEM name="B" displayableText="B"/>
+		<LISTITEM name="E" displayableText="E"/>
+		<LISTITEM name="OTHER" localizedDisplayableText="Hipics21/properties/task/Competition/item.typeOther"/>
+	</COMBOBOX>
+    <COMBOBOX name="textLineNoCB" extends="ComboBoxEditor" >
+		<LISTITEM name="1" displayableText="1"/>
+		<LISTITEM name="2" displayableText="2"/>
+		<LISTITEM name="3" displayableText="3"/>
+		<LISTITEM name="4" displayableText="4"/>
+		<LISTITEM name="5" displayableText="5"/>
+	</COMBOBOX>
+    <COMBOBOX name="textSizeCB" extends="ComboBoxEditor" >
+		<LISTITEM name="XS" displayableText="XS"/>
+		<LISTITEM name="S" displayableText="S"/>
+		<LISTITEM name="M" displayableText="M"/>
+		<LISTITEM name="L" displayableText="L"/>
+		<LISTITEM name="XL" displayableText="XL"/>
+	</COMBOBOX>
+    <COMBOBOX name="textAlignmentCB" extends="ComboBoxEditor" >
+		<LISTITEM name="LEFT" localizedDisplayableText="Hipics21/properties/task/Competition/label.alignedLeft"/>
+		<LISTITEM name="CENTER" localizedDisplayableText="Hipics21/properties/task/Competition/label.alignedCenter"/>
+		<LISTITEM name="RIGHT" localizedDisplayableText="Hipics21/properties/task/Competition/label.alignedRight"/>
+	</COMBOBOX>
+ 
+    <GROUP name="TopGroup" >
+	    <LABEL name="competitionNoLabel" extends="EditorLabel" localizedDisplayableText="Hipics21/properties/task/Competition/label.competitionNo" >
+			<GRIDBAGCONSTRAINTS gridx="0" gridy="0" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10"  insetleft="10" insetright="10"/>
+	    </LABEL>
+        <INTEGER name="competitionNo" extends="IntegerFieldEditor"  >
+			<GRIDBAGCONSTRAINTS gridx="1" gridy="0" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="HORIZONTAL" anchor="NORTHWEST" insettop="10" insetright="10"/>
+		</INTEGER>
+	    <LABEL name="competitionSerieLabel" extends="EditorLabel" localizedDisplayableText="Hipics21/properties/task/Competition/label.serie" >
+			<GRIDBAGCONSTRAINTS gridx="2" gridy="0" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10"  insetleft="10" insetright="10"/>
+	    </LABEL>
+        <TEXT name="serie" extends="TextFieldEditor"  preferredwidth="40" >
+			<GRIDBAGCONSTRAINTS gridx="3" gridy="0" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="HORIZONTAL" anchor="NORTHWEST" insettop="10" insetright="10"/>
+		</TEXT>
+	    <LABEL name="competitionDateLabel" extends="EditorLabel" localizedDisplayableText="Hipics21/properties/task/Competition/label.date" >
+			<GRIDBAGCONSTRAINTS gridx="4" gridy="0" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10"  insetleft="10" insetright="10"/>
+	    </LABEL>
+        <DATE name="competitionDateEditor" extends="DateFieldEditor" >
+			<GRIDBAGCONSTRAINTS gridx="5" gridy="0" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="HORIZONTAL" anchor="NORTHWEST" insettop="10" insetright="10"/>
+		</DATE>
+	    <LABEL name="competitionTimeLabel" extends="EditorLabel" localizedDisplayableText="Hipics21/properties/task/Competition/label.time" >
+			<GRIDBAGCONSTRAINTS gridx="6" gridy="0" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10"  insetleft="10" insetright="10"/>
+	    </LABEL>
+        <TEXT name="time" extends="TextFieldEditor" >
+			<GRIDBAGCONSTRAINTS gridx="7" gridy="0" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="HORIZONTAL" anchor="NORTHWEST" insettop="10" insetright="10"/>
+		</TEXT>
+   		<LABEL name="fillerLabel" extends="EditorLabel" displayableText=" " >
+           	<GRIDBAGCONSTRAINTS gridx="8" gridy="0" gridwidth="4" gridheight="1" weightx="1" weighty="1" fill="BOTH" />
+       	</LABEL>
+	    <LABEL name="entryFeeLabel" extends="EditorLabel" localizedDisplayableText="Hipics21/properties/task/Competition/label.entryFee" >
+			<GRIDBAGCONSTRAINTS gridx="0" gridy="1" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10"  insetleft="10" insetright="10"/>
+	    </LABEL>
+        <DOUBLE name="entryFee" extends="DoubleFieldEditor" >
+			<GRIDBAGCONSTRAINTS gridx="1" gridy="1" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="HORIZONTAL" anchor="NORTHWEST" insettop="10" insetright="10"/>
+		</DOUBLE>
+ 	</GROUP>
+ 	
+    <GROUP name="AdminInfoTabbedPaneGroup" >
+	    <LABEL name="modeLabel" extends="EditorLabel" localizedDisplayableText="Hipics21/properties/task/Competition/label.mode" >
+			<GRIDBAGCONSTRAINTS gridx="0" gridy="0" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10"  insetleft="10" insetright="10"/>
+	    </LABEL>
+        <COMBOBOX name="competitionMode" extends="CompetitionModeCB"  preferredwidth="100" >
+			<GRIDBAGCONSTRAINTS gridx="1" gridy="0" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="HORIZONTAL" anchor="NORTHWEST" insettop="10" insetright="10"/>
+		</COMBOBOX>
+	    <LABEL name="programLabel" extends="EditorLabel" localizedDisplayableText="Hipics21/properties/task/Competition/label.program" >
+			<GRIDBAGCONSTRAINTS gridx="2" gridy="0" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10"  insetleft="10" insetright="10"/>
+	    </LABEL>
+        <COMBOBOX name="competitionProgram" extends="CompetitionProgramCB"  preferredwidth="110" >
+			<GRIDBAGCONSTRAINTS gridx="3" gridy="0" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="HORIZONTAL" anchor="NORTHWEST" insettop="10" insetright="10"/>
+		</COMBOBOX>
+   		<LABEL name="fillerLabel" extends="EditorLabel" displayableText=" " >
+           	<GRIDBAGCONSTRAINTS gridx="4" gridy="0" gridwidth="5" gridheight="1" weightx="1" weighty="0" fill="BOTH" />
+       	</LABEL>
+	    <LABEL name="remarksLabel" extends="EditorLabel" localizedDisplayableText="Hipics21/properties/task/Competition/label.remarks" >
+			<GRIDBAGCONSTRAINTS gridx="0" gridy="1" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10"  insetleft="10" insetright="10"/>
+	    </LABEL>
+        <TEXTAREA name="remarks" extends="TextAreaEditor" preferredheight="45" >
+			<GRIDBAGCONSTRAINTS gridx="1" gridy="1" gridwidth="8" gridheight="1" weightx="1" weighty="0" fill="HORIZONTAL" anchor="NORTHWEST" insettop="10" insetright="5"/>
+		</TEXTAREA>
+	    <LABEL name="prizesLabel" extends="EditorLabel" localizedDisplayableText="Hipics21/properties/task/Competition/label.prizes" >
+			<GRIDBAGCONSTRAINTS gridx="0" gridy="2" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10"  insetleft="10" insetright="10"/>
+	    </LABEL>
+        <TEXTAREA name="prizes" extends="TextAreaEditor" preferredheight="45" >
+			<GRIDBAGCONSTRAINTS gridx="1" gridy="2" gridwidth="8" gridheight="1" weightx="1" weighty="0" fill="HORIZONTAL" anchor="NORTHWEST" insettop="10" insetright="5"/>
+		</TEXTAREA>
+	    <LABEL name="platesLabel" extends="EditorLabel" localizedDisplayableText="Hipics21/properties/task/Competition/label.plates" >
+			<GRIDBAGCONSTRAINTS gridx="0" gridy="3" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10"  insetleft="10" insetright="10"/>
+	    </LABEL>
+        <TEXTAREA name="plates" extends="TextAreaEditor" preferredheight="45" >
+			<GRIDBAGCONSTRAINTS gridx="1" gridy="3" gridwidth="8" gridheight="1" weightx="1" weighty="0" fill="HORIZONTAL" anchor="NORTHWEST" insettop="10" insetright="5"/>
+		</TEXTAREA>
+	    <LABEL name="rubansLabel" extends="EditorLabel" localizedDisplayableText="Hipics21/properties/task/Competition/label.rubans" >
+			<GRIDBAGCONSTRAINTS gridx="0" gridy="4" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10"  insetleft="10" insetright="10"/>
+	    </LABEL>
+        <TEXTAREA name="rubans" extends="TextAreaEditor" preferredheight="45" >
+			<GRIDBAGCONSTRAINTS gridx="1" gridy="4" gridwidth="8" gridheight="1" weightx="1" weighty="0" fill="HORIZONTAL" anchor="NORTHWEST" insettop="10" insetright="5"/>
+		</TEXTAREA>
+	</GROUP>
+    <GROUP name="licenceAuthorizedGroup" >
+	    <LABEL name="licenceSRLabel" extends="EditorLabel" localizedDisplayableText="Hipics21/properties/task/Competition/label.licenceSR" >
+			<GRIDBAGCONSTRAINTS gridx="0" gridy="0" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10"  insetright="5"/>
+	    </LABEL>
+        <CHECKBOX name="licenceSR" extends="CheckBoxEditor" enabled="true">
+			<GRIDBAGCONSTRAINTS gridx="1" gridy="0" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10"  insetright="10"/>
+		</CHECKBOX>
+	    <LABEL name="licenceSNLabel" extends="EditorLabel" localizedDisplayableText="Hipics21/properties/task/Competition/label.licenceSN" >
+			<GRIDBAGCONSTRAINTS gridx="2" gridy="0" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10"  insetleft="10" insetright="5"/>
+	    </LABEL>
+        <CHECKBOX name="licenceSN" extends="CheckBoxEditor"  enabled="true">
+			<GRIDBAGCONSTRAINTS gridx="3" gridy="0" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10"  insetright="10"/>
+		</CHECKBOX>
+	    <LABEL name="licenceBRLabel" extends="EditorLabel" localizedDisplayableText="Hipics21/properties/task/Competition/label.licenceBR" >
+			<GRIDBAGCONSTRAINTS gridx="4" gridy="0" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10"  insetleft="10" insetright="5"/>
+	    </LABEL>
+        <CHECKBOX name="licenceBR" extends="CheckBoxEditor"  enabled="true">
+			<GRIDBAGCONSTRAINTS gridx="5" gridy="0" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10"  insetright="10"/>
+		</CHECKBOX>
+	    <LABEL name="licenceDRLabel" extends="EditorLabel" localizedDisplayableText="Hipics21/properties/task/Competition/label.licenceDR" >
+			<GRIDBAGCONSTRAINTS gridx="6" gridy="0" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10"  insetleft="10" insetright="5"/>
+	    </LABEL>
+        <CHECKBOX name="licenceDR" extends="CheckBoxEditor"  enabled="true">
+			<GRIDBAGCONSTRAINTS gridx="7" gridy="0" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10"  insetright="10"/>
+		</CHECKBOX>
+	    <LABEL name="licenceDNLabel" extends="EditorLabel" localizedDisplayableText="Hipics21/properties/task/Competition/label.licenceDN" >
+			<GRIDBAGCONSTRAINTS gridx="8" gridy="0" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10"  insetleft="10" insetright="5"/>
+	    </LABEL>
+        <CHECKBOX name="licenceDN" extends="CheckBoxEditor"  enabled="true">
+			<GRIDBAGCONSTRAINTS gridx="9" gridy="0" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10"  insetright="10"/>
+		</CHECKBOX>
+	</GROUP>
+    <GROUP name="LimitationsInfoTabbedPaneGroup" >
+	    <LABEL name="minAgeRiderLabel" extends="EditorLabel" localizedDisplayableText="Hipics21/properties/task/Competition/label.minAgeRider" >
+			<GRIDBAGCONSTRAINTS gridx="0" gridy="0" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10"  insetleft="10" insetright="10"/>
+	    </LABEL>
+        <INTEGER name="minAgeRider" extends="IntegerFieldEditor" >
+			<GRIDBAGCONSTRAINTS gridx="1" gridy="0" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="HORIZONTAL" anchor="NORTHWEST" insettop="10" insetright="10"/>
+		</INTEGER>
+	    <LABEL name="maxAgeRiderLabel" extends="EditorLabel" localizedDisplayableText="Hipics21/properties/task/Competition/label.maxAgeRider" >
+			<GRIDBAGCONSTRAINTS gridx="2" gridy="0" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10"  insetleft="10" insetright="10"/>
+	    </LABEL>
+        <INTEGER name="maxAgeRider" extends="IntegerFieldEditor" >
+			<GRIDBAGCONSTRAINTS gridx="3" gridy="0" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="HORIZONTAL" anchor="NORTHWEST" insettop="10" insetright="10"/>
+		</INTEGER>
+	    <LABEL name="minAgeHorseLabel" extends="EditorLabel" localizedDisplayableText="Hipics21/properties/task/Competition/label.minAgeHorse" >
+			<GRIDBAGCONSTRAINTS gridx="4" gridy="0" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10"  insetleft="10" insetright="10"/>
+	    </LABEL>
+        <INTEGER name="minAgeHorse" extends="IntegerFieldEditor" >
+			<GRIDBAGCONSTRAINTS gridx="5" gridy="0" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="HORIZONTAL" anchor="NORTHWEST" insettop="10" insetright="10"/>
+		</INTEGER>
+	    <LABEL name="maxAgeHorseLabel" extends="EditorLabel" localizedDisplayableText="Hipics21/properties/task/Competition/label.maxAgeHorse" >
+			<GRIDBAGCONSTRAINTS gridx="6" gridy="0" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10"  insetleft="10" insetright="10"/>
+	    </LABEL>
+        <INTEGER name="maxAgeHorse" extends="IntegerFieldEditor" >
+			<GRIDBAGCONSTRAINTS gridx="7" gridy="0" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="HORIZONTAL" anchor="NORTHWEST" insettop="10" insetright="10"/>
+		</INTEGER>
+	    <LABEL name="emptyLabel" extends="EditorLabel" displayableText=" " >
+			<GRIDBAGCONSTRAINTS gridx="8" gridy="0" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10"  insetleft="10" insetright="10"/>
+	    </LABEL>
+	    <LABEL name="minPtsRiderLabel" extends="EditorLabel" localizedDisplayableText="Hipics21/properties/task/Competition/label.minPtsRider" >
+			<GRIDBAGCONSTRAINTS gridx="0" gridy="1" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10"  insetleft="10" insetright="10"/>
+	    </LABEL>
+        <INTEGER name="minPtsRider" extends="IntegerFieldEditor" >
+			<GRIDBAGCONSTRAINTS gridx="1" gridy="1" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="HORIZONTAL" anchor="NORTHWEST" insettop="10" insetright="10"/>
+		</INTEGER>
+	    <LABEL name="maxPtsRiderLabel" extends="EditorLabel" localizedDisplayableText="Hipics21/properties/task/Competition/label.maxPtsRider" >
+			<GRIDBAGCONSTRAINTS gridx="2" gridy="1" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10"  insetleft="10" insetright="10"/>
+	    </LABEL>
+        <INTEGER name="maxPtsRider" extends="IntegerFieldEditor" >
+			<GRIDBAGCONSTRAINTS gridx="3" gridy="1" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="HORIZONTAL" anchor="NORTHWEST" insettop="10" insetright="10"/>
+		</INTEGER>
+	    <LABEL name="minPtsHorseLabel" extends="EditorLabel" localizedDisplayableText="Hipics21/properties/task/Competition/label.minPtsHorse" >
+			<GRIDBAGCONSTRAINTS gridx="4" gridy="1" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10"  insetleft="10" insetright="10"/>
+	    </LABEL>
+        <INTEGER name="minPtsHorse" extends="IntegerFieldEditor" >
+			<GRIDBAGCONSTRAINTS gridx="5" gridy="1" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="HORIZONTAL" anchor="NORTHWEST" insettop="10" insetright="10"/>
+		</INTEGER>
+	    <LABEL name="maxPtsHorseLabel" extends="EditorLabel" localizedDisplayableText="Hipics21/properties/task/Competition/label.maxPtsHorse" >
+			<GRIDBAGCONSTRAINTS gridx="6" gridy="1" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10"  insetleft="10" insetright="10"/>
+	    </LABEL>
+        <INTEGER name="maxPtsHorse" extends="IntegerFieldEditor" >
+			<GRIDBAGCONSTRAINTS gridx="7" gridy="1" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="HORIZONTAL" anchor="NORTHWEST" insettop="10" insetright="10"/>
+		</INTEGER>
+	    <LABEL name="minPtsRiderHorseLabel" extends="EditorLabel" localizedDisplayableText="Hipics21/properties/task/Competition/label.minPtsRiderHorse" >
+			<GRIDBAGCONSTRAINTS gridx="0" gridy="2" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10"  insetleft="10" insetright="10"/>
+	    </LABEL>
+        <INTEGER name="minPtsRiderHorse" extends="IntegerFieldEditor" >
+			<GRIDBAGCONSTRAINTS gridx="1" gridy="2" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="HORIZONTAL" anchor="NORTHWEST" insettop="10" insetright="10"/>
+		</INTEGER>
+	    <LABEL name="maxPtsRiderHorseLabel" extends="EditorLabel" localizedDisplayableText="Hipics21/properties/task/Competition/label.maxPtsRiderHorse" >
+			<GRIDBAGCONSTRAINTS gridx="2" gridy="2" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10"  insetleft="10" insetright="10"/>
+	    </LABEL>
+        <INTEGER name="maxPtsRiderHorse" extends="IntegerFieldEditor" >
+			<GRIDBAGCONSTRAINTS gridx="3" gridy="2" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="HORIZONTAL" anchor="NORTHWEST" insettop="10" insetright="10"/>
+		</INTEGER>
+	    <LABEL name="maxKmLabel" extends="EditorLabel" localizedDisplayableText="Hipics21/properties/task/Competition/label.maxKm" >
+			<GRIDBAGCONSTRAINTS gridx="0" gridy="3" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10"  insetleft="10" insetright="10"/>
+	    </LABEL>
+        <INTEGER name="maxKm" extends="IntegerFieldEditor" >
+			<GRIDBAGCONSTRAINTS gridx="1" gridy="3" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="HORIZONTAL" anchor="NORTHWEST" insettop="10" insetright="10"/>
+		</INTEGER>
+	    <LABEL name="licenceLabel" extends="EditorLabel" localizedDisplayableText="Hipics21/properties/task/Competition/label.licence" >
+			<GRIDBAGCONSTRAINTS gridx="0" gridy="4" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10"  insetleft="10" />
+	    </LABEL>
+		<GROUP name="licenceAuthorizedGroup" extends="licenceAuthorizedGroup" backgroundColor="panelBackgroundColor" foregroundColor="panelForegroundColor" scrollable="true">
+			<GRIDBAGCONSTRAINTS gridx="1" gridy="4" gridwidth="8" gridheight="1" weighty="0"  anchor="NORTHWEST" fill="NONE" />
+		</GROUP>
+	    <LABEL name="otherRestrictionsLabel" extends="EditorLabel" localizedDisplayableText="Hipics21/properties/task/Competition/label.otherRestrictions" >
+			<GRIDBAGCONSTRAINTS gridx="0" gridy="5" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10"  insetleft="10" insetright="10"/>
+	    </LABEL>
+        <TEXTAREA name="otherRestrictions" extends="TextAreaEditor" preferredheight="45" >
+			<GRIDBAGCONSTRAINTS gridx="1" gridy="5" gridwidth="8" gridheight="1" weightx="0" weighty="0" fill="HORIZONTAL" anchor="NORTHWEST" insettop="10" insetright="5"/>
+		</TEXTAREA>
+	</GROUP>
+    <GROUP name="OfficialsTabbedPaneGroup" >
+	    <LABEL name="judge1Label" extends="EditorLabel" localizedDisplayableText="Hipics21/properties/task/Contact/label.judge1" >
+			<GRIDBAGCONSTRAINTS gridx="0" gridy="0" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10"  insetleft="10" insetright="10"/>
+	    </LABEL>
+        <COMBOBOX name="judge1" extends="judgeListCB"  preferredwidth="300">
+			<GRIDBAGCONSTRAINTS gridx="1" gridy="0" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10" insetright="5"/>
+		</COMBOBOX>
+	    <LABEL name="judge1LetterLabel" extends="EditorLabel" localizedDisplayableText="Hipics21/properties/task/Contact/label.judgeLetter" >
+			<GRIDBAGCONSTRAINTS gridx="2" gridy="0" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10"  insetleft="10" insetright="10"/>
+	    </LABEL>
+        <COMBOBOX name="judge1Letter" extends="judgeLetterCB"  preferredwidth="40">
+			<GRIDBAGCONSTRAINTS gridx="3" gridy="0" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10" insetright="5"/>
+		</COMBOBOX>
+   		<LABEL name="filler1Label" extends="EditorLabel" displayableText=" " >
+           	<GRIDBAGCONSTRAINTS gridx="4" gridy="0" gridwidth="2" gridheight="1" weightx="1" weighty="0" fill="BOTH" />
+       	</LABEL>
+	    <LABEL name="judge2Label" extends="EditorLabel" localizedDisplayableText="Hipics21/properties/task/Contact/label.judge2" >
+			<GRIDBAGCONSTRAINTS gridx="0" gridy="1" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10"  insetleft="10" insetright="10"/>
+	    </LABEL>
+        <COMBOBOX name="judge2" extends="judgeListCB"  preferredwidth="300">
+			<GRIDBAGCONSTRAINTS gridx="1" gridy="1" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10" insetright="5"/>
+		</COMBOBOX>
+	    <LABEL name="judge2LetterLabel" extends="EditorLabel" localizedDisplayableText="Hipics21/properties/task/Contact/label.judgeLetter" >
+			<GRIDBAGCONSTRAINTS gridx="2" gridy="1" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10"  insetleft="10" insetright="10"/>
+	    </LABEL>
+        <COMBOBOX name="judge2Letter" extends="judgeLetterCB"  preferredwidth="40">
+			<GRIDBAGCONSTRAINTS gridx="3" gridy="1" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10" insetright="5"/>
+		</COMBOBOX>
+   		<LABEL name="filler2Label" extends="EditorLabel" displayableText=" " >
+           	<GRIDBAGCONSTRAINTS gridx="4" gridy="1" gridwidth="2" gridheight="1" weightx="1" weighty="0" fill="BOTH" />
+       	</LABEL>
+	    <LABEL name="judge3Label" extends="EditorLabel" localizedDisplayableText="Hipics21/properties/task/Contact/label.judge3" >
+			<GRIDBAGCONSTRAINTS gridx="0" gridy="2" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10"  insetleft="10" insetright="10"/>
+	    </LABEL>
+        <COMBOBOX name="judge3" extends="judgeListCB"  preferredwidth="300">
+			<GRIDBAGCONSTRAINTS gridx="1" gridy="2" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10" insetright="5"/>
+		</COMBOBOX>
+	    <LABEL name="judge3LetterLabel" extends="EditorLabel" localizedDisplayableText="Hipics21/properties/task/Contact/label.judgeLetter" >
+			<GRIDBAGCONSTRAINTS gridx="2" gridy="2" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10"  insetleft="10" insetright="10"/>
+	    </LABEL>
+        <COMBOBOX name="judge3Letter" extends="judgeLetterCB"  preferredwidth="40">
+			<GRIDBAGCONSTRAINTS gridx="3" gridy="2" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10" insetright="5"/>
+		</COMBOBOX>
+   		<LABEL name="filler3Label" extends="EditorLabel" displayableText=" " >
+           	<GRIDBAGCONSTRAINTS gridx="4" gridy="2" gridwidth="2" gridheight="1" weightx="1" weighty="0" fill="BOTH" />
+       	</LABEL>
+	    <LABEL name="judge4Label" extends="EditorLabel" localizedDisplayableText="Hipics21/properties/task/Contact/label.judge4" >
+			<GRIDBAGCONSTRAINTS gridx="0" gridy="3" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10"  insetleft="10" insetright="10"/>
+	    </LABEL>
+        <COMBOBOX name="judge4" extends="judgeListCB"  preferredwidth="300">
+			<GRIDBAGCONSTRAINTS gridx="1" gridy="3" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10" insetright="5"/>
+		</COMBOBOX>
+	    <LABEL name="judge4LetterLabel" extends="EditorLabel" localizedDisplayableText="Hipics21/properties/task/Contact/label.judgeLetter" >
+			<GRIDBAGCONSTRAINTS gridx="2" gridy="3" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10"  insetleft="10" insetright="10"/>
+	    </LABEL>
+        <COMBOBOX name="judge4Letter" extends="judgeLetterCB"  preferredwidth="40">
+			<GRIDBAGCONSTRAINTS gridx="3" gridy="3" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10" insetright="5"/>
+		</COMBOBOX>
+   		<LABEL name="filler4Label" extends="EditorLabel" displayableText=" " >
+           	<GRIDBAGCONSTRAINTS gridx="4" gridy="3" gridwidth="2" gridheight="1" weightx="1" weighty="0" fill="BOTH" />
+       	</LABEL>
+	    <LABEL name="judge5Label" extends="EditorLabel" localizedDisplayableText="Hipics21/properties/task/Contact/label.judge5" >
+			<GRIDBAGCONSTRAINTS gridx="0" gridy="4" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10"  insetleft="10" insetright="10"/>
+	    </LABEL>
+        <COMBOBOX name="judge5" extends="judgeListCB"  preferredwidth="300">
+			<GRIDBAGCONSTRAINTS gridx="1" gridy="4" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10" insetright="5"/>
+		</COMBOBOX>
+	    <LABEL name="judge5LetterLabel" extends="EditorLabel" localizedDisplayableText="Hipics21/properties/task/Contact/label.judgeLetter" >
+			<GRIDBAGCONSTRAINTS gridx="2" gridy="4" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10"  insetleft="10" insetright="10"/>
+	    </LABEL>
+        <COMBOBOX name="judge5Letter" extends="judgeLetterCB"  preferredwidth="40">
+			<GRIDBAGCONSTRAINTS gridx="3" gridy="4" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10" insetright="5"/>
+		</COMBOBOX>
+   		<LABEL name="filler5Label" extends="EditorLabel" displayableText=" " >
+           	<GRIDBAGCONSTRAINTS gridx="4" gridy="4" gridwidth="2" gridheight="1" weightx="1" weighty="0" fill="BOTH" />
+       	</LABEL>
+	</GROUP>
+     <GROUP name="PrintoutTabbedPaneGroup" >
+	    <LABEL name="HeadLine1Label" extends="EditorLabel" localizedDisplayableText="Hipics21/properties/task/Competition/label.headLine1" >
+			<GRIDBAGCONSTRAINTS gridx="0" gridy="0" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10"  insetleft="10" insetright="10"/>
+	    </LABEL>
+        <TEXT name="headLine1" extends="TextFieldEditor" >
+			<GRIDBAGCONSTRAINTS gridx="1" gridy="0" gridwidth="1" gridheight="1" weightx="1" weighty="0" fill="HORIZONTAL" anchor="NORTHWEST" insettop="10" insetright="5"/>
+		</TEXT>
+	    <LABEL name="HeadLineSize1Label" extends="EditorLabel" localizedDisplayableText="Hipics21/properties/task/Competition/label.size" >
+			<GRIDBAGCONSTRAINTS gridx="2" gridy="0" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10"  insetleft="10" insetright="10"/>
+	    </LABEL>
+        <COMBOBOX name="headLineSize1" extends="textSizeCB" >
+			<GRIDBAGCONSTRAINTS gridx="3" gridy="0" gridwidth="1" gridheight="1" weightx="1" weighty="0" fill="HORIZONTAL" anchor="NORTHWEST" insettop="10" insetright="5"/>
+		</COMBOBOX>
+	    <LABEL name="HeadLineAlignment1Label" extends="EditorLabel" localizedDisplayableText="Hipics21/properties/task/Competition/label.alignment" >
+			<GRIDBAGCONSTRAINTS gridx="4" gridy="0" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10"  insetleft="10" insetright="10"/>
+	    </LABEL>
+        <COMBOBOX name="headLineAlignment1" extends="textAlignmentCB" >
+			<GRIDBAGCONSTRAINTS gridx="5" gridy="0" gridwidth="1" gridheight="1" weightx="1" weighty="0" fill="HORIZONTAL" anchor="NORTHWEST" insettop="10" insetright="5"/>
+		</COMBOBOX>
+	    <LABEL name="HeadLineLineNo1Label" extends="EditorLabel" localizedDisplayableText="Hipics21/properties/task/Competition/label.lineNo" >
+			<GRIDBAGCONSTRAINTS gridx="6" gridy="0" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10"  insetleft="10" insetright="10"/>
+	    </LABEL>
+        <COMBOBOX name="headLineLineNo1" extends="textLineNoCB" >
+			<GRIDBAGCONSTRAINTS gridx="7" gridy="0" gridwidth="1" gridheight="1" weightx="1" weighty="0" fill="HORIZONTAL" anchor="NORTHWEST" insettop="10" insetright="5"/>
+		</COMBOBOX>
+	    <LABEL name="HeadLine2Label" extends="EditorLabel" localizedDisplayableText="Hipics21/properties/task/Competition/label.headLine2" >
+			<GRIDBAGCONSTRAINTS gridx="0" gridy="1" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10"  insetleft="10" insetright="10"/>
+	    </LABEL>
+        <TEXT name="headLine2" extends="TextFieldEditor" >
+			<GRIDBAGCONSTRAINTS gridx="1" gridy="1" gridwidth="1" gridheight="1" weightx="1" weighty="0" fill="HORIZONTAL" anchor="NORTHWEST" insettop="10" insetright="5"/>
+		</TEXT>
+	    <LABEL name="HeadLineSize2Label" extends="EditorLabel" localizedDisplayableText="Hipics21/properties/task/Competition/label.size" >
+			<GRIDBAGCONSTRAINTS gridx="2" gridy="1" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10"  insetleft="10" insetright="10"/>
+	    </LABEL>
+        <COMBOBOX name="headLineSize2" extends="textSizeCB" >
+			<GRIDBAGCONSTRAINTS gridx="3" gridy="1" gridwidth="1" gridheight="1" weightx="1" weighty="0" fill="HORIZONTAL" anchor="NORTHWEST" insettop="10" insetright="5"/>
+		</COMBOBOX>
+	    <LABEL name="HeadLineAlignment2Label" extends="EditorLabel" localizedDisplayableText="Hipics21/properties/task/Competition/label.alignment" >
+			<GRIDBAGCONSTRAINTS gridx="4" gridy="1" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10"  insetleft="10" insetright="10"/>
+	    </LABEL>
+        <COMBOBOX name="headLineAlignment2" extends="textAlignmentCB" >
+			<GRIDBAGCONSTRAINTS gridx="5" gridy="1" gridwidth="1" gridheight="1" weightx="1" weighty="0" fill="HORIZONTAL" anchor="NORTHWEST" insettop="10" insetright="5"/>
+		</COMBOBOX>
+	    <LABEL name="HeadLineLineNo2Label" extends="EditorLabel" localizedDisplayableText="Hipics21/properties/task/Competition/label.lineNo" >
+			<GRIDBAGCONSTRAINTS gridx="6" gridy="1" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10"  insetleft="10" insetright="10"/>
+	    </LABEL>
+        <COMBOBOX name="headLineLineNo2" extends="textLineNoCB" >
+			<GRIDBAGCONSTRAINTS gridx="7" gridy="1" gridwidth="1" gridheight="1" weightx="1" weighty="0" fill="HORIZONTAL" anchor="NORTHWEST" insettop="10" insetright="5"/>
+		</COMBOBOX>
+	    <LABEL name="HeadLine3Label" extends="EditorLabel" localizedDisplayableText="Hipics21/properties/task/Competition/label.headLine3" >
+			<GRIDBAGCONSTRAINTS gridx="0" gridy="2" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10"  insetleft="10" insetright="10"/>
+	    </LABEL>
+        <TEXT name="headLine3" extends="TextFieldEditor" >
+			<GRIDBAGCONSTRAINTS gridx="1" gridy="2" gridwidth="1" gridheight="1" weightx="1" weighty="0" fill="HORIZONTAL" anchor="NORTHWEST" insettop="10" insetright="5"/>
+		</TEXT>
+	    <LABEL name="HeadLineSize3Label" extends="EditorLabel" localizedDisplayableText="Hipics21/properties/task/Competition/label.size" >
+			<GRIDBAGCONSTRAINTS gridx="2" gridy="2" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10"  insetleft="10" insetright="10"/>
+	    </LABEL>
+        <COMBOBOX name="headLineSize3" extends="textSizeCB" >
+			<GRIDBAGCONSTRAINTS gridx="3" gridy="2" gridwidth="1" gridheight="1" weightx="1" weighty="0" fill="HORIZONTAL" anchor="NORTHWEST" insettop="10" insetright="5"/>
+		</COMBOBOX>
+	    <LABEL name="HeadLineAlignment3Label" extends="EditorLabel" localizedDisplayableText="Hipics21/properties/task/Competition/label.alignment" >
+			<GRIDBAGCONSTRAINTS gridx="4" gridy="2" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10"  insetleft="10" insetright="10"/>
+	    </LABEL>
+        <COMBOBOX name="headLineAlignment3" extends="textAlignmentCB" >
+			<GRIDBAGCONSTRAINTS gridx="5" gridy="2" gridwidth="1" gridheight="1" weightx="1" weighty="0" fill="HORIZONTAL" anchor="NORTHWEST" insettop="10" insetright="5"/>
+		</COMBOBOX>
+	    <LABEL name="HeadLineLineNo3Label" extends="EditorLabel" localizedDisplayableText="Hipics21/properties/task/Competition/label.lineNo" >
+			<GRIDBAGCONSTRAINTS gridx="6" gridy="2" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10"  insetleft="10" insetright="10"/>
+	    </LABEL>
+        <COMBOBOX name="headLineLineNo3" extends="textLineNoCB" >
+			<GRIDBAGCONSTRAINTS gridx="7" gridy="2" gridwidth="1" gridheight="1" weightx="1" weighty="0" fill="HORIZONTAL" anchor="NORTHWEST" insettop="10" insetright="5"/>
+		</COMBOBOX>
+	    <LABEL name="freeTextLabel" extends="EditorLabel" localizedDisplayableText="Hipics21/properties/task/Competition/label.freeText" >
+			<GRIDBAGCONSTRAINTS gridx="0" gridy="3" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10"  insetleft="10" />
+	    </LABEL>
+        <TEXTAREA name="freeText" extends="TextAreaEditor" preferredheight="45" >
+			<GRIDBAGCONSTRAINTS gridx="1" gridy="3" gridwidth="5" gridheight="1" weightx="1" weighty="0" fill="HORIZONTAL" anchor="NORTHWEST" insettop="10" insetright="5"/>
+		</TEXTAREA>
+	    <LABEL name="freeTextLineNo1Label" extends="EditorLabel" localizedDisplayableText="Hipics21/properties/task/Competition/label.lineNo" >
+			<GRIDBAGCONSTRAINTS gridx="6" gridy="3" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="NONE" anchor="NORTHWEST" insettop="10"  insetleft="10" insetright="10"/>
+	    </LABEL>
+        <COMBOBOX name="freeTextLineNo1" extends="textLineNoCB" >
+			<GRIDBAGCONSTRAINTS gridx="7" gridy="3" gridwidth="1" gridheight="1" weightx="1" weighty="0" fill="HORIZONTAL" anchor="NORTHWEST" insettop="10" insetright="5"/>
+		</COMBOBOX>
+	</GROUP>
+    <GROUP name="GlobalInfoTabbedPaneGroup" >
+	    <TABBEDPANE name="globalInfoGroup" extends="EmptyOpaqueSubTabbedpane">
+			<GROUP name="adminCompetitionTabbedPaneGroup" extends="AdminInfoTabbedPaneGroup" localizedDisplayableText="Hipics21/properties/task/Competition/item.adminInfo" backgroundColor="panelBackgroundColor" foregroundColor="panelForegroundColor" scrollable="true">
+				<GRIDBAGCONSTRAINTS gridx="0" gridy="0" gridwidth="1" gridheight="1" anchor="NORTH" fill="BOTH" />
+			</GROUP>
+			<GROUP name="limitationsCompetitionTabbedPaneGroup" extends="LimitationsInfoTabbedPaneGroup" localizedDisplayableText="Hipics21/properties/task/Competition/item.limitationsInfo" backgroundColor="panelBackgroundColor" foregroundColor="panelForegroundColor" scrollable="true">
+				<GRIDBAGCONSTRAINTS gridx="0" gridy="0" gridwidth="1" gridheight="1" anchor="NORTH" fill="NONE" />
+			</GROUP>
+			<GROUP name="officialsTabbedPaneGroup" extends="OfficialsTabbedPaneGroup" localizedDisplayableText="Hipics21/properties/task/Competition/item.officials" backgroundColor="panelBackgroundColor" foregroundColor="panelForegroundColor" scrollable="true">
+				<GRIDBAGCONSTRAINTS gridx="0" gridy="0" gridwidth="1" gridheight="1" anchor="NORTH" fill="BOTH" />
+			</GROUP>
+			<GROUP name="printoutTabbedPaneGroup" extends="PrintoutTabbedPaneGroup" localizedDisplayableText="Hipics21/properties/task/Competition/item.report" backgroundColor="panelBackgroundColor" foregroundColor="panelForegroundColor" scrollable="true">
+				<GRIDBAGCONSTRAINTS gridx="0" gridy="0" gridwidth="1" gridheight="1" anchor="NORTH" fill="BOTH" />
+			</GROUP>
+			<GRIDBAGCONSTRAINTS gridx="0" gridy="0" gridwidth="1" gridheight="1" weightx="1" weighty="1" anchor="NORTH" fill="BOTH" insetbottom="10" insetleft="10" insettop="10" />
+		</TABBEDPANE>
+	</GROUP>
+	
+    <GROUP name="EntriesGroup" >
+		<BUTTON name="createEntryButton" extends="CreateEntryButton">
+			<GRIDBAGCONSTRAINTS gridx="0" gridy="0" gridwidth="1" gridheight="1" weightx="0" weighty="0" fill="HORIZONTAL" insettop="10" insetleft="10"  anchor="WEST"/>
+		</BUTTON> 
+	    <DISPLAY2 name="entriesTable" extends="EmptyTable" >
+	            <GRIDBAGCONSTRAINTS gridx="0" gridy="2" gridheight="1" gridwidth="4" weightx="1" weighty="1" insetleft="10" insetright="10" insettop="10" insetbottom="5" anchor="NORTH" fill="BOTH"/>
+	        	<COLUMN name="startNoCol" extends="TextFieldEditor" weight="0" localizedDisplayableText="Hipics21/properties/task/Competition/label.startNo" />
+	        	<COLUMN name="orderNoCol" extends="IntegerFieldEditor" weight="0" localizedDisplayableText="Hipics21/properties/task/Licence/label.licenceNo" />
+	        	<COLUMN name="licenceCol" extends="AutoCompleteFieldEditor" weight="0" localizedDisplayableText="Hipics21/properties/task/Contact/label.firstName" />
+	        	<COLUMN name="riderLastNameCol" extends="AutoCompleteFieldEditor" weight="1" localizedDisplayableText="Hipics21/properties/task/Contact/label.lastName" />
+	        	<COLUMN name="riderFirstNameCol" extends="TextFieldEditor" weight="1" localizedDisplayableText="Hipics21/properties/task/Contact/label.firstName" />
+	        	<COLUMN name="riderTownCol" extends="TextFieldEditor" weight="1" localizedDisplayableText="Hipics21/properties/task/Contact/label.town" />
+	        	<COLUMN name="passportCol" extends="AutoCompleteFieldEditor" weight="0" localizedDisplayableText="Hipics21/properties/task/Horse/label.passport" />
+	        	<COLUMN name="horseCol" extends="AutoCompleteFieldEditor" weight="2" localizedDisplayableText="Hipics21/properties/task/Horse/label.horse" />
+	        	<COLUMN name="statusCbCol" extends="TextFieldEditor" weight="0" localizedDisplayableText="Hipics21/properties/task/Competition/label.status" />
+	    </DISPLAY2> 
+		<GRIDBAGCONSTRAINTS gridx="0" gridy="1" gridwidth="1" gridheight="1" weightx="1" weighty="1" anchor="NORTH" fill="VERTICAL"/>
+	</GROUP>
+    <GROUP name="RidersGroup" >
+        <DISPLAY2 name="ridersTable" extends="EmptyTable" >
+            <GRIDBAGCONSTRAINTS gridx="0" gridy="2" gridheight="1" gridwidth="1" weightx="1" weighty="1" insetleft="10" insetright="10" insettop="10" insetbottom="5" anchor="NORTH" fill="BOTH"/>
+        	<COLUMN name="riderLicenceCol" extends="TextFieldEditor" weight="2" localizedDisplayableText="Hipics21/properties/task/Licence/label.licenceNo" />
+        	<COLUMN name="riderLastNameCol" extends="TextFieldEditor" weight="0" localizedDisplayableText="Hipics21/properties/task/Contact/label.lastName" />
+        	<COLUMN name="riderFirstNameCol" extends="TextFieldEditor" weight="0" localizedDisplayableText="Hipics21/properties/task/Contact/label.firstName" />
+        	<COLUMN name="competitionNoCol" extends="TextFieldEditor" weight="2" localizedDisplayableText="Hipics21/properties/task/Competition/label.competitionNo" />
+        	<COLUMN name="horseCol" extends="TextFieldEditor" weight="2" localizedDisplayableText="Hipics21/properties/task/Horse/label.horse" />
+        	<COLUMN name="pointsCol" extends="TextFieldEditor" weight="2" localizedDisplayableText="Hipics21/properties/task/Result/label.points" />
+        	<COLUMN name="rankCol" extends="TextFieldEditor" weight="2" localizedDisplayableText="Hipics21/properties/task/Result/label.rank" />
+        	<COLUMN name="placedYNCol" extends="CheckBoxEditor" weight="2" localizedDisplayableText="Hipics21/properties/task/Result/label.placed" />
+        </DISPLAY2> 
+		<GRIDBAGCONSTRAINTS gridx="0" gridy="0" gridwidth="1" gridheight="1" weightx="1" weighty="1" anchor="NORTH" fill="BOTH"/>
+	</GROUP>
+    <GROUP name="HorsesGroup" >
+        <DISPLAY2 name="horsesTable" extends="EmptyTable" >
+            <GRIDBAGCONSTRAINTS gridx="0" gridy="2" gridheight="1" gridwidth="1" weightx="1" weighty="1" insetleft="10" insetright="10" insettop="10" insetbottom="5" anchor="NORTH" fill="BOTH"/>
+        	<COLUMN name="horsePassportCol" extends="TextFieldEditor" weight="2" localizedDisplayableText="Hipics21/properties/task/Horse/label.passport" />
+        	<COLUMN name="horseNameCol" extends="TextFieldEditor" weight="0" localizedDisplayableText="Hipics21/properties/task/Horse/label.horse" />
+        	<COLUMN name="competitionNoCol" extends="TextFieldEditor" weight="2" localizedDisplayableText="Hipics21/properties/task/Competition/label.competitionNo" />
+        	<COLUMN name="riderLastNameCol" extends="TextFieldEditor" weight="0" localizedDisplayableText="Hipics21/properties/task/Contact/label.lastName" />
+        	<COLUMN name="riderFirstNameCol" extends="TextFieldEditor" weight="0" localizedDisplayableText="Hipics21/properties/task/Contact/label.firstName" />
+        	<COLUMN name="pointsCol" extends="TextFieldEditor" weight="2" localizedDisplayableText="Hipics21/properties/task/Result/label.points" />
+        	<COLUMN name="rankCol" extends="TextFieldEditor" weight="2" localizedDisplayableText="Hipics21/properties/task/Result/label.rank" />
+        	<COLUMN name="placedYNCol" extends="CheckBoxEditor" weight="2" localizedDisplayableText="Hipics21/properties/task/Result/label.placed" />
+        </DISPLAY2> 
+		<GRIDBAGCONSTRAINTS gridx="0" gridy="0" gridwidth="1" gridheight="1" weightx="1" weighty="1" anchor="NORTH" fill="BOTH"/>
+	</GROUP>
+    <GROUP name="TabbedPaneGroup" >
+	    <TABBEDPANE name="globalInfoGroup" extends="EmptyOpaqueSubTabbedpane">
+			<GROUP name="detailsCompetitionTabbedPaneGroup" extends="GlobalInfoTabbedPaneGroup" localizedDisplayableText="Hipics21/properties/task/Competition/item.globalInfo" backgroundColor="panelBackgroundColor" foregroundColor="panelForegroundColor" scrollable="true">
+				<GRIDBAGCONSTRAINTS gridx="0" gridy="0" gridwidth="1" gridheight="1" anchor="NORTH" fill="BOTH" />
+			</GROUP>
+			<GROUP name="entriesGroup" extends="EntriesGroup" localizedDisplayableText="Hipics21/properties/task/Competition/item.entries" backgroundColor="panelBackgroundColor" foregroundColor="panelForegroundColor" scrollable="true">
+				<GRIDBAGCONSTRAINTS gridx="0" gridy="0" gridwidth="1" gridheight="1" anchor="NORTH" fill="BOTH" />
+			</GROUP>
+			<GROUP name="ridersGroup" extends="RidersGroup" localizedDisplayableText="Hipics21/properties/task/Competition/item.riderList" backgroundColor="panelBackgroundColor" foregroundColor="panelForegroundColor" scrollable="true">
+				<GRIDBAGCONSTRAINTS gridx="0" gridy="0" gridwidth="1" gridheight="1" anchor="NORTH" fill="BOTH" />
+			</GROUP>
+			<GROUP name="horsesGroup" extends="HorsesGroup" localizedDisplayableText="Hipics21/properties/task/Competition/item.horseList" backgroundColor="panelBackgroundColor" foregroundColor="panelForegroundColor" scrollable="true">
+				<GRIDBAGCONSTRAINTS gridx="0" gridy="0" gridwidth="1" gridheight="1" anchor="NORTH" fill="BOTH" />
+			</GROUP>
+			<GRIDBAGCONSTRAINTS gridx="0" gridy="0" gridwidth="1" gridheight="1" weightx="1" weighty="1" anchor="NORTH" fill="BOTH" insetbottom="10" insetleft="10" insettop="10" />
+		</TABBEDPANE>
+   	</GROUP>
+    <GROUP name="DressageCompetitionForm" localizedDisplayableText="Hipics21/properties/task/Competition/HeaderTitle.dressageCompetition" scrollable="false" layoutmanager="gridbaglayout" backgroundColor="panelBackgroundColor" foregroundColor="panelForegroundColor">
+        <GROUP name="titleGroup" extends="GenericTitleGroup">
+            <GRIDBAGCONSTRAINTS gridx="0" gridy="0" gridwidth="1" gridheight="1" weightx="1" weighty="0" />
+            <ATTRIBUTE_PARAM component="titleLabel" name="localizedDisplayableText" value="Hipics21/properties/task/Competition/HeaderTitle.dressageCompetition" />
+        </GROUP>
+        <GROUP name="topGroup" extends="TopGroup">
+            <GRIDBAGCONSTRAINTS gridx="0" gridy="1" gridwidth="1" gridheight="1" weightx="1" weighty="0" />
+        </GROUP>
+        <GROUP name="tabbedPaneGroup" extends="TabbedPaneGroup">
+            <GRIDBAGCONSTRAINTS gridx="0" gridy="2" gridwidth="1" gridheight="1" weightx="1" weighty="0" />
+        </GROUP>
+		<GRIDBAGCONSTRAINTS gridx="0" gridy="0" gridwidth="1" gridheight="1" weightx="1" weighty="1" anchor="NORTH" fill="BOTH"/>
+	</GROUP>
+</DOCUMENT>

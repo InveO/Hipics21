@@ -26,7 +26,9 @@
     <BUTTON name="CreateEventButton" font="editorFont" localizedDisplayableText="Hipics21/properties/desktop/Button/button.createEvent" />
     <BUTTON name="CreateEventingButton" font="editorFont" localizedDisplayableText="Hipics21/properties/desktop/Button/button.createEventing" />
     <BUTTON name="CreateJumpingButton" font="editorFont" localizedDisplayableText="Hipics21/properties/desktop/Button/button.createJumping" />
+    <BUTTON name="DownloadButton" font="editorFont" localizedDisplayableText="Hipics21/properties/desktop/Button/button.download" />
     <BUTTON name="EditorButton" font="editorFont" />
+    <BUTTON name="UploadButton" font="editorFont" localizedDisplayableText="Hipics21/properties/desktop/Button/button.upload" />
 
     <CHECKBOX name="CheckBoxEditor" font="editorFont" /> 
     
